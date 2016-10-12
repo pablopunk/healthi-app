@@ -1,0 +1,36 @@
+{
+  "name": "healthi",
+  "version": "1.0.0",
+  "description": "Simple app to check your Mac Battery health.",
+  "main": "index.js",
+  "scripts": {
+    "build": "electron-packager . healthi --platform=darwin --arch=x64",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablopunk/healthi.git"
+  },
+  "keywords": [
+    "mac",
+    "battery",
+    "health",
+    "menu",
+    "topbar",
+    "app"
+  ],
+  "author": "Pablo Varela",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pablopunk/healthi/issues"
+  },
+  "homepage": "https://github.com/pablopunk/healthi#readme",
+  "dependencies": {
+    "electron": "^1.4.3",
+    "menubar": "^5.1.0"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.1.0",
+    "electron-prebuilt": "^1.4.3"
+  }
+}
