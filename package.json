@@ -2,7 +2,7 @@
   "name": "healthi",
   "version": "1.0.0",
   "description": "Simple app to check your Mac Battery health.",
-  "main": "index.js",
+  "main": "js/app.js",
   "scripts": {
     "build": "electron-packager . healthi --platform=darwin --arch=x64",
     "start": "electron ."
