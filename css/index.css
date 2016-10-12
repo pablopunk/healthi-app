@@ -1,5 +1,27 @@
+@font-face {
+    font-family: Hack;
+    src: url('../fonts/Hack.ttf');
+}
+
+body, html {
+    font-family: Hack;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    color: #5D9CEC;
+}
 
 #battery-health {
+    display: inline-block;
+    color: white;
     width: 100%;
     text-align: center;
+    font-size: 3em;
+}
+
+#message {
+    color: white;
+    font-size: 70%;
+    text-align: center;
+    width: 100%;
 }
