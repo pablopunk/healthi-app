@@ -14,7 +14,7 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 ### Download
 
-Binaries soon at `releases`
+Check the [realeases page](https://github.com/pablopunk/healthi/releases) for binaries.
 
 ### Run
 
