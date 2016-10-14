@@ -4,7 +4,7 @@
   "description": "Simple app to check your Mac Battery health.",
   "main": "js/app.js",
   "scripts": {
-    "build": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist --ignore=node_modules",
+    "build": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "electron ."
   },
   "repository": {
