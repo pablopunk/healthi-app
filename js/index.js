@@ -38,7 +38,9 @@ function updateBattery(percentage)
 	else if (lColor == loadColor.replace) document.getElementById('message').innerHTML = message.replace
 }
 
-var child = exec("ioreg -l | grep Capacity | cut -d' ' -f19", function (error, stdout, stderr) {
+function main()
+{
+	var child = exec("ioreg -l | grep Capacity | cut -d' ' -f19", function (error, stdout, stderr) {
     if (error !== null) {
     	console.log('exec error: ' + error);
     }
@@ -50,3 +52,4 @@ var child = exec("ioreg -l | grep Capacity | cut -d' ' -f19", function (error, s
     var health = (capacityNow * 100) / capacityOriginal;
     updateBattery(health);
 })
+}

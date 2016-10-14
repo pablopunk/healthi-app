@@ -1,6 +1,6 @@
 
 body, html {
-    font-family: 'Helvetica Neue';
+    font-family: "HelveticaNeue-Light";
     margin: 0;
     padding: 0;
     height: 100%;
@@ -29,9 +29,14 @@ body, html {
 }
 
 #message {
+    display: inline-block;
     color: white;
     font-size: 90%;
     text-align: center;
-    width: 100%;
+    width: 85%;
     margin-top: 3%;
+}
+
+.fa-refresh {
+    color: #F5F7FA;
 }
