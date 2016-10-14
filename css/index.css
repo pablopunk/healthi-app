@@ -1,10 +1,6 @@
-@font-face {
-    font-family: Hack;
-    src: url('../fonts/Hack.ttf');
-}
 
 body, html {
-    font-family: Hack;
+    font-family: 'Helvetica Neue';
     margin: 0;
     padding: 0;
     height: 100%;
@@ -21,7 +17,8 @@ body, html {
 
 #message {
     color: white;
-    font-size: 70%;
+    font-size: 90%;
     text-align: center;
     width: 100%;
+    margin-top: 3%;
 }

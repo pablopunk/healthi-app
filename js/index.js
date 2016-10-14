@@ -9,7 +9,7 @@ var message = {
 var color = {
 	replace : "#DA4453",
 	soon : "#F6BB42",
-	good: "#37BC9B"
+	good: "#26C281"
 }
 
 function getColor(percentage) {
