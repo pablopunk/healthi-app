@@ -6,27 +6,36 @@ var message = {
 	good: "Your battery is OK :)"
 }
 
-var color = {
+var bodyColor = {
 	replace : "#DA4453",
 	soon : "#F6BB42",
-	good: "#26C281"
+	good: "#37BC9B"
 }
 
-function getColor(percentage) {
-	if (percentage > 90) return color.good
-	if (percentage > 80) return color.soon
-	return color.replace
+var loadColor = {
+	replace : "#ED5565",
+	soon : "#FFCE54",
+	good: "#48CFAD"
+}
+
+function getColor(percentage, body = false) {
+	if (percentage > 90) return body ? bodyColor.good : loadColor.good
+	if (percentage > 80) return body ? bodyColor.soon : loadColor.soon
+	return  body ? bodyColor.replace : loadColor.replace
 }
 
 function updateBattery(percentage)
 {
 	percentage = percentage.toFixed(0);
     document.getElementById('battery-health').innerHTML = percentage + "%";
-	var c = getColor(percentage);
-	document.body.style.backgroundColor = c;
-	if (c == color.good) document.getElementById('message').innerHTML = message.good
-	else if (c == color.soon) document.getElementById('message').innerHTML = message.soon
-	else if (c == color.replace) document.getElementById('message').innerHTML = message.replace
+	var lColor = getColor(percentage);
+	var bColor = getColor(percentage, true);
+	document.body.style.backgroundColor = bColor;
+	document.getElementById('battery-color').style.backgroundColor = lColor;
+	document.getElementById('battery-color').style.width = percentage+"%";
+	if (lColor == loadColor.good) document.getElementById('message').innerHTML = message.good
+	else if (lColor == loadColor.soon) document.getElementById('message').innerHTML = message.soon
+	else if (lColor == loadColor.replace) document.getElementById('message').innerHTML = message.replace
 }
 
 var child = exec("ioreg -l | grep Capacity | cut -d' ' -f19", function (error, stdout, stderr) {

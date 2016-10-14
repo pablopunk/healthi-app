@@ -4,7 +4,15 @@ body, html {
     margin: 0;
     padding: 0;
     height: 100%;
-    color: #5D9CEC;
+}
+
+#battery-color {
+    width: 0;
+    height: 100%;
+    position: absolute;
+    display: inline-block;
+    z-index: -1;
+    transition: 1s;
 }
 
 #battery-health {
@@ -13,6 +21,11 @@ body, html {
     width: 100%;
     text-align: center;
     font-size: 3em;
+}
+
+#battery-health i {
+    margin-top: 10%;
+    color: #5D9CEC;
 }
 
 #message {
