@@ -10,7 +10,7 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 - **80% - 90%**:  Battery is ok but it should be replaced soon
 - **0%  - 80%**:  Battery needs to be replaced
 
-![shot](https://d17oy1vhnax1f7.cloudfront.net/items/3E2W0I3x261u3U113W10/Screen%20Recording%202016-10-14%20at%2007.38%20PM.gif?v=b46486be)
+![shot](https://raw.githubusercontent.com/pablopunk/healthi/master/img/screenshot.gif)
 
 ### Download
 
