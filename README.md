@@ -1,6 +1,6 @@
 # :green_heart::yellow_heart::heart: healthi :battery:
 
-![img](https://d17oy1vhnax1f7.cloudfront.net/items/0P1T1r021F2g1K0A3K1L/healthi_screen.png?v=823efbf6)
+![img](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
 
 ##### Simple app to check your Mac Battery health.
 
