@@ -8,13 +8,25 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 - **90% - 100%**: Battery is good
 - **80% - 90%**:  Battery is ok but it should be replaced soon
-- **0%  - 80%**:   Battery needs to be replaced
+- **0%  - 80%**:  Battery needs to be replaced
 
 ![shot](https://d17oy1vhnax1f7.cloudfront.net/items/3E2W0I3x261u3U113W10/Screen%20Recording%202016-10-14%20at%2007.38%20PM.gif?v=b46486be)
 
 ### Download
 
-Check the [realeases page](https://github.com/pablopunk/healthi/releases) for binaries.
+There are two options to install this app:
+
+1. Without Homebrew:
+
+    Check the [realeases page](https://github.com/pablopunk/healthi/releases) for binaries.
+
+2. With Homebrew:
+
+    If you have [Homebrew](http://brew.sh/index_es.html) with the [Cask](https://caskroom.github.io/) extension, it's as simple as running:
+
+    ```shell
+    brew cask install healthi
+    ```
 
 ### Run
 
