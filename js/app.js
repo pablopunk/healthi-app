@@ -2,7 +2,8 @@ var menubar = require('menubar')
 var mb = menubar({
   width: 200,
   height: 90,
-  icon: __dirname+"/../img/topbar.png"
+  icon: __dirname+"/../img/topbar.png",
+  dir: 'html'
 })
 
 mb.on('ready', function ready() {
