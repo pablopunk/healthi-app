@@ -19,17 +19,11 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 There are two options to install this app:
 
-1. Without Homebrew:
+Option | Download |
+-------|----------|
+[Homebrew Cask](https://caskroom.github.io) | `brew cask install healthi` |
+Manual Download | [Download the latest realease](https://github.com/pablopunk/healthi/releases/latest) |
 
-    Check the [realeases page](https://github.com/pablopunk/healthi/releases) for binaries.
-
-2. With Homebrew:
-
-    If you have [Homebrew](http://brew.sh/index_es.html) with the [Cask](https://caskroom.github.io/) extension, it's as simple as running:
-
-    ```shell
-    brew cask install healthi
-    ```
 
 ### Run
 
