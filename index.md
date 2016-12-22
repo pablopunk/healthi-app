@@ -1,5 +1,3 @@
-# :green_heart::yellow_heart::heart: healthi :battery:
-
 [![Build Status](https://travis-ci.org/pablopunk/healthi.svg?branch=master)](https://travis-ci.org/pablopunk/healthi)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
