@@ -17,8 +17,6 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 ### Download
 
-There are two options to install this app:
-
 Option | Download |
 -------|----------|
 [Homebrew Cask](https://caskroom.github.io) | `brew cask install healthi` |
