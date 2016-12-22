@@ -1,11 +1,13 @@
-var menubar = require('menubar')
-var mb = menubar({
+const path = require('path')
+const menubar = require('menubar')
+
+const mb = menubar({
   width: 200,
   height: 90,
-  icon: __dirname+"/../img/topbarTemplate.png",
+  icon: path.join(__dirname, '/../img/topbarTemplate.png'),
   dir: 'html'
 })
 
-mb.on('ready', function ready() {
-	console.log('app is ready')
+mb.on('ready', () => {
+  console.log('app is ready')
 })
