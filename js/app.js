@@ -5,7 +5,7 @@ const mb = menubar({
   width: 200,
   height: 90,
   icon: path.join(__dirname, '/../img/topbarTemplate.png'),
-  dir: 'html'
+  dir: path.join(__dirname, '../html')
 })
 
 mb.on('ready', () => {
