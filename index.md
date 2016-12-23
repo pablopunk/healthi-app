@@ -1,8 +1,4 @@
 
-![img](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
-
-##### Simple app to check your Mac Battery health.
-
 _healthi_ shows a small icon in your topbar with the current battery health of your mac, which is the percentage of your battery capacity compared to the original one.
 
 - **90% - 100%**: Battery is good
