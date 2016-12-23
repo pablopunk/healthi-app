@@ -1,4 +1,4 @@
-# :green_heart::yellow_heart::heart: healthi :battery:
+# 💚💛❤️ healti 🔋
 
 [![Build Status](https://travis-ci.org/pablopunk/healthi.svg?branch=master)](https://travis-ci.org/pablopunk/healthi)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
@@ -20,7 +20,7 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 Option | Download |
 -------|----------|
 [Homebrew Cask](https://caskroom.github.io) | `brew cask install healthi` |
-Manual Download | [Download the latest realease](https://github.com/pablopunk/healthi/releases/latest) |
+Manual Download | [▼ Download the latest realease](https://github.com/pablopunk/healthi/releases/latest) |
 
 
 ### Run
@@ -30,9 +30,13 @@ npm install
 npm start
 ```
 
-### Build
+### Build
 
 ```shell
 npm install -g electron-packager
 npm run build
 ```
+
+### Contribute
+
+Feel free to fork the repo and make a pull request. The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`. You can run `npm test` to make sure your code follows these rules 🙌🏻.
