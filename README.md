@@ -33,8 +33,7 @@ npm start
 ### Build
 
 ```shell
-npm install -g electron-packager
-npm run build
+npm run build # creates the .app inside dist/healthi-darwin-x64
 ```
 
 ### Contribute
