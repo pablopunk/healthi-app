@@ -26,3 +26,11 @@ test('check window size', async t => {
     t.true(bounds.height > 0)
   })
 })
+
+test('check window content', async t => {
+  app.client.browserWindow.isVisible().then(() => {
+    app.client.getText('#battery-health').then(text => {
+      t.true(text === '')
+    })
+  })
+})
