@@ -39,4 +39,8 @@ npm run build
 
 ### Contribute
 
-Feel free to fork the repo and make a pull request. The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`. You can run `npm test` to make sure your code follows these rules 🙌🏻.
+Feel free to fork the repo and make a pull request.
+
+The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`.
+
+You can run `npm test` to make sure your code follows these rules and that the app runs without errors 😉.
