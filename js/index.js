@@ -19,10 +19,10 @@ const loadColor = {
 }
 
 function getColor(percentage, body = false) {
-  if (percentage > 90) {
+  if (percentage >= 90) {
     return body ? bodyColor.good : loadColor.good
   }
-  if (percentage > 80) {
+  if (percentage >= 80) {
     return body ? bodyColor.soon : loadColor.soon
   }
   return body ? bodyColor.replace : loadColor.replace
