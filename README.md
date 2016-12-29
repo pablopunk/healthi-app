@@ -1,4 +1,4 @@
-# 💚💛❤️ healti 🔋
+# 💚💛❤️ healti ⚡️
 
 [![Build Status](https://travis-ci.org/pablopunk/healthi.svg?branch=master)](https://travis-ci.org/pablopunk/healthi)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
@@ -38,7 +38,7 @@ npm run build # creates the .app inside dist/healthi-darwin-x64
 
 ### Contribute
 
-Feel free to fork the repo and make a pull request.
+Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
 
 The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`.
 
