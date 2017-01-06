@@ -36,6 +36,12 @@ npm start
 npm run build # creates the .app inside dist/healthi-darwin-x64
 ```
 
+### Technologies
+
+The app is written in html/css/js and it's built in [electron](http://electron.atom.io).
+
+To use electron for creating a topbar app, I use [menubar](https://github.com/maxogden/menubar)
+
 ### Contribute
 
 Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
