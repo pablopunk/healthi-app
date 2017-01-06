@@ -6,43 +6,64 @@ const message = {
   good: 'Your battery is OK :)'
 }
 
-const bodyColor = {
-  replace: '#DA4453',
-  soon: '#F6BB42',
-  good: '#37BC9B'
+const color = {
+  replace: {
+    body: '#DA4453',
+    battery: '#ED5565'
+  },
+  soon: {
+    body: '#F6BB42',
+    battery: '#FFCE54'
+  },
+  good: {
+    body: '#37BC9B',
+    battery: '#48CFAD'
+  }
 }
 
-const loadColor = {
-  replace: '#ED5565',
-  soon: '#FFCE54',
-  good: '#48CFAD'
-}
-
-function getColor(percentage, body = false) {
+function getColor(percentage) {
   if (percentage >= 90) {
-    return body ? bodyColor.good : loadColor.good
+    return color.good
   }
   if (percentage >= 80) {
-    return body ? bodyColor.soon : loadColor.soon
+    return color.soon
   }
-  return body ? bodyColor.replace : loadColor.replace
+  return color.replace
 }
 
 function updateBattery(percentage) {
   percentage = percentage.toFixed(0)
+  const batteryColor = getColor(percentage).battery
+  const bodyColor = getColor(percentage).body
+  changeBodyColor(bodyColor)
+  changeBatteryColor(batteryColor)
+  changeBatteryPercentage(percentage)
+  changeBatteryMessage(batteryColor)
+}
+
+function changeBodyColor(backgroundColor) {
+  document.body.style.backgroundColor = backgroundColor
+}
+
+function changeBatteryColor(batteryColor) {
+  document.getElementById('battery-color').style.backgroundColor = batteryColor
+}
+
+function changeBatteryPercentage(percentage) {
   document.getElementById('battery-health').innerHTML = percentage + '%'
-  const lColor = getColor(percentage)
-  const bColor = getColor(percentage, true)
-  document.body.style.backgroundColor = bColor
-  document.getElementById('battery-color').style.backgroundColor = lColor
   document.getElementById('battery-color').style.width = percentage + '%'
-  if (lColor === loadColor.good) {
-    document.getElementById('message').innerHTML = message.good
-  } else if (lColor === loadColor.soon) {
-    document.getElementById('message').innerHTML = message.soon
-  } else if (lColor === loadColor.replace) {
-    document.getElementById('message').innerHTML = message.replace
+}
+
+function changeBatteryMessage(batteryColor) {
+  let newMessage
+  if (batteryColor === color.good.battery) {
+    newMessage = message.good
+  } else if (batteryColor === color.soon.battery) {
+    newMessage = message.soon
+  } else if (batteryColor === color.replace.battery) {
+    newMessage = message.replace
   }
+  document.getElementById('message').innerHTML = newMessage
 }
 
 function main() {
