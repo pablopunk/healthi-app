@@ -6,13 +6,16 @@
 		<title>healthi</title>
 		<link rel="stylesheet" href="./css/index.css">
 		<link rel="stylesheet" href="./css/font-awesome.min.css">
-		<script type="text/javascript" src="./js/index.js"></script>
 	</head>
-	<body onload="main()">
+	<body>
 		<div id="battery-color"></div>
 		<div id="battery-health">
 			<i class="fa fa-circle-o-notch fa-spin"></i>
 		</div>
 		<div id="message"></div><a href="#" onclick="location.reload()"><i class="fa fa-refresh" aria-hidden="true"></i></a>
 	</body>
+  <script type="text/javascript">
+    const main = require('./js/index.js')
+    main()
+  </script>
 </html>
