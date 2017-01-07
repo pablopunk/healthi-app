@@ -34,3 +34,11 @@ test('check window content', async t => {
     })
   })
 })
+
+test('see if dev tools are closed', async t => {
+  app.client.waitUntilWindowLoaded().then(() => {
+    app.browserWindow.isDevToolsOpened(isOpen => {
+      t.false(isOpen)
+    })
+  })
+})
