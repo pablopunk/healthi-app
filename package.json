@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pablopunk/healthi.git"
+    "url": "git+https://github.com/pablopunk/healthi.app.git"
   },
   "keywords": [
     "mac",
@@ -23,9 +23,9 @@
   "author": "Pablo Varela",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/pablopunk/healthi/issues"
+    "url": "https://github.com/pablopunk/healthi.app/issues"
   },
-  "homepage": "https://github.com/pablopunk/healthi#readme",
+  "homepage": "https://github.com/pablopunk/healthi.app#readme",
   "dependencies": {
     "electron": "^1.4.3",
     "healthi": "^1.0.4",
