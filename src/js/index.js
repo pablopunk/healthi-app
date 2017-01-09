@@ -67,7 +67,9 @@ function changeBatteryMessage(batteryColor) {
 }
 
 function main() {
-  health(updateBattery)
+  health(battery => {
+    updateBattery(battery.health)
+  })
 }
 
 module.exports = main

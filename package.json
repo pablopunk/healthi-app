@@ -28,7 +28,7 @@
   "homepage": "https://github.com/pablopunk/healthi#readme",
   "dependencies": {
     "electron": "^1.4.3",
-    "healthi": "^1.0.1",
+    "healthi": "^1.0.4",
     "menubar": "^5.1.0"
   },
   "devDependencies": {
