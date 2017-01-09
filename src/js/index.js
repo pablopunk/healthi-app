@@ -1,4 +1,4 @@
-const health = require('./health')
+const health = require('healthi')
 
 const message = {
   replace: 'Replace battery :(',

@@ -1,5 +1,5 @@
 {
-  "name": "healthi",
+  "name": "healthi.app",
   "version": "1.0.3",
   "description": "Simple app to check your Mac Battery health.",
   "main": "src/js/app.js",
@@ -28,6 +28,7 @@
   "homepage": "https://github.com/pablopunk/healthi#readme",
   "dependencies": {
     "electron": "^1.4.3",
+    "healthi": "^1.0.1",
     "menubar": "^5.1.0"
   },
   "devDependencies": {
