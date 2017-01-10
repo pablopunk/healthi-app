@@ -19,3 +19,8 @@ mb.on('ready', () => {
   })
 })
 
+mb.on('after-hide', () => {
+  console.log('window hidden')
+  mb.window.loadURL('file://'+__dirname+'/../index.html')
+})
+
