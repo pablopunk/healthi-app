@@ -2,7 +2,6 @@ title: Healthi
 description: Simple app to check your Mac Battery health.
 google_analytics: 
 show_downloads: true
-theme: jekyll-theme-minimal
 
 gems:
   - jekyll-mentions
