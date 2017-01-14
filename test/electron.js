@@ -6,7 +6,7 @@ let app
 test.before(async () => {
   app = new Application({
     path: './node_modules/electron-prebuilt/dist/Electron.app/Contents/MacOS/Electron',
-    args: ['./src/js/app.js']
+    args: ['./bin/app.js']
   })
 
   await app.start()

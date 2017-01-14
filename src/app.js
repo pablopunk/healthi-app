@@ -1,14 +1,14 @@
-const path = require('path')
-const {globalShortcut} = require('electron')
-const menubar = require('menubar')
+import path from 'path'
+import {globalShortcut} from 'electron'
+import menubar from 'menubar'
 
-const indexPath = path.join(__dirname, '..')
+const indexPath = path.join(__dirname, '..', 'static')
 const indexURL = 'file://' + indexPath + '/index.html'
 
 const mb = menubar({
   width: 200,
   height: 90,
-  icon: path.join(__dirname, '..', '..', 'img', 'topbarTemplate.png'),
+  icon: path.join(__dirname, '..', 'img', 'topbarTemplate.png'),
   dir: indexPath,
   showDockIcon: true
 })

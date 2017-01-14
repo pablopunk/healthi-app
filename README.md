@@ -27,13 +27,15 @@ Manual Download | [▼ Download the latest realease](https://github.com/pablopun
 
 ```shell
 npm install
+npm run build
 npm start
 ```
 
-### Build
+
+### Distribution
 
 ```shell
-npm run build # creates the .app inside dist/healthi-darwin-x64
+npm run pack # creates the .app inside dist/healthi-darwin-x64
 ```
 
 ### Technologies

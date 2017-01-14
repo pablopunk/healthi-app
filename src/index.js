@@ -1,4 +1,4 @@
-const health = require('healthi')
+import health from 'healthi'
 
 const message = {
   replace: 'Replace battery :(',

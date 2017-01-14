@@ -2,9 +2,10 @@
   "name": "healthi-app",
   "version": "1.3.0",
   "description": "Simple app to check your Mac Battery health.",
-  "main": "src/js/app.js",
+  "main": "bin/app.js",
   "scripts": {
-    "build": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
+    "build": "babel src --presets babel-preset-es2015 --out-dir bin",
+    "pack": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "electron .",
     "test": "xo && ava"
   },
@@ -33,6 +34,8 @@
   },
   "devDependencies": {
     "ava": "^0.17.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.3",
     "spectron": "^3.4.1",
@@ -42,6 +45,9 @@
     "esnext": true,
     "semicolon": false,
     "space": true,
+    "ignores": [
+      "bin/**"
+    ],
     "envs": [
       "browser"
     ],
