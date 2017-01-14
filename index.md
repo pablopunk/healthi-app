@@ -1,3 +1,5 @@
+<center>
+
 ![](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
 
 _healthi_ shows a small icon in your topbar with the current battery health of your mac, which is the percentage of your battery capacity compared to the original one.
@@ -8,31 +10,6 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 ![shot](https://raw.githubusercontent.com/pablopunk/healthi/master/img/screenshot.gif)
 
-### Download
+[▼ Download](https://github.com/pablopunk/healthi/releases/latest)
 
-Option | Download |
--------|----------|
-[Homebrew Cask](https://caskroom.github.io) | `brew cask install healthi` |
-Manual Download | [▼ Download the latest realease](https://github.com/pablopunk/healthi/releases/latest) |
-
-
-### Run
-
-```shell
-npm install
-npm start
-```
-
-### Build
-
-```shell
-npm run build # creates the .app inside dist/healthi-darwin-x64
-```
-
-### Contribute
-
-Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
-
-The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`.
-
-You can run `npm test` to make sure your code follows these rules and that the app runs without errors 😉.
+</center>
