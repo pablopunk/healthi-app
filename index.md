@@ -1,4 +1,3 @@
-<center>
 
 ![](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
 
@@ -12,4 +11,3 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 [▼ Download](https://github.com/pablopunk/healthi/releases/latest)
 
-</center>
