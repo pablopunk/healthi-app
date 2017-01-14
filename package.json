@@ -7,7 +7,7 @@
     "build": "babel src --presets babel-preset-es2015 --out-dir bin",
     "pack": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "electron .",
-    "test": "xo && ava"
+    "test": "npm build && xo && ava"
   },
   "repository": {
     "type": "git",

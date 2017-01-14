@@ -21,7 +21,7 @@ const color = {
   }
 }
 
-function getColor(percentage) {
+const getColor = percentage => {
   if (percentage >= 90) {
     return color.good
   }
@@ -31,30 +31,20 @@ function getColor(percentage) {
   return color.replace
 }
 
-function updateBattery(percentage) {
-  percentage = percentage.toFixed(0)
-  const batteryColor = getColor(percentage).battery
-  const bodyColor = getColor(percentage).body
-  changeBodyColor(bodyColor)
-  changeBatteryColor(batteryColor)
-  changeBatteryPercentage(percentage)
-  changeBatteryMessage(batteryColor)
-}
-
-function changeBodyColor(backgroundColor) {
+const changeBodyColor = backgroundColor => {
   document.body.style.backgroundColor = backgroundColor
 }
 
-function changeBatteryColor(batteryColor) {
+const changeBatteryColor = batteryColor => {
   document.getElementById('battery-color').style.backgroundColor = batteryColor
 }
 
-function changeBatteryPercentage(percentage) {
+const changeBatteryPercentage = percentage => {
   document.getElementById('battery-health').innerHTML = percentage + '%'
   document.getElementById('battery-color').style.width = percentage + '%'
 }
 
-function changeBatteryMessage(batteryColor) {
+const changeBatteryMessage = batteryColor => {
   let newMessage
   if (batteryColor === color.good.battery) {
     newMessage = message.good
@@ -66,7 +56,17 @@ function changeBatteryMessage(batteryColor) {
   document.getElementById('message').innerHTML = newMessage
 }
 
-function main() {
+const updateBattery = percentage => {
+  percentage = percentage.toFixed(0)
+  const batteryColor = getColor(percentage).battery
+  const bodyColor = getColor(percentage).body
+  changeBodyColor(bodyColor)
+  changeBatteryColor(batteryColor)
+  changeBatteryPercentage(percentage)
+  changeBatteryMessage(batteryColor)
+}
+
+const main = () => {
   health(battery => {
     updateBattery(battery.health)
   })

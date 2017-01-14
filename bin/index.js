@@ -27,7 +27,7 @@ var color = {
   }
 };
 
-function getColor(percentage) {
+var getColor = function getColor(percentage) {
   if (percentage >= 90) {
     return color.good;
   }
@@ -35,9 +35,9 @@ function getColor(percentage) {
     return color.soon;
   }
   return color.replace;
-}
+};
 
-function updateBattery(percentage) {
+var updateBattery = function updateBattery(percentage) {
   percentage = percentage.toFixed(0);
   var batteryColor = getColor(percentage).battery;
   var bodyColor = getColor(percentage).body;
@@ -45,22 +45,22 @@ function updateBattery(percentage) {
   changeBatteryColor(batteryColor);
   changeBatteryPercentage(percentage);
   changeBatteryMessage(batteryColor);
-}
+};
 
-function changeBodyColor(backgroundColor) {
+var changeBodyColor = function changeBodyColor(backgroundColor) {
   document.body.style.backgroundColor = backgroundColor;
-}
+};
 
-function changeBatteryColor(batteryColor) {
+var changeBatteryColor = function changeBatteryColor(batteryColor) {
   document.getElementById('battery-color').style.backgroundColor = batteryColor;
-}
+};
 
-function changeBatteryPercentage(percentage) {
+var changeBatteryPercentage = function changeBatteryPercentage(percentage) {
   document.getElementById('battery-health').innerHTML = percentage + '%';
   document.getElementById('battery-color').style.width = percentage + '%';
-}
+};
 
-function changeBatteryMessage(batteryColor) {
+var changeBatteryMessage = function changeBatteryMessage(batteryColor) {
   var newMessage = void 0;
   if (batteryColor === color.good.battery) {
     newMessage = message.good;
@@ -70,12 +70,12 @@ function changeBatteryMessage(batteryColor) {
     newMessage = message.replace;
   }
   document.getElementById('message').innerHTML = newMessage;
-}
+};
 
-function main() {
+var main = function main() {
   (0, _healthi2.default)(function (battery) {
     updateBattery(battery.health);
   });
-}
+};
 
 module.exports = main;
