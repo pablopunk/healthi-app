@@ -17,10 +17,9 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 ### Download
 
-Option | Download |
--------|----------|
-[Homebrew Cask](https://caskroom.github.io) | `brew cask install healthi` |
-Manual Download | [▼ Download the latest realease](https://github.com/pablopunk/healthi/releases/latest) |
+With [Homebrew Cask](https://caskroom.github.io) ▹ `brew cask install healthi`
+
+Or just [▼ Download](https://github.com/pablopunk/healthi/releases/latest)
 
 
 ### Run
@@ -30,7 +29,6 @@ npm install
 npm run build
 npm start
 ```
-
 
 ### Distribution
 
@@ -52,4 +50,12 @@ Feel free to fork the repo and make a pull request. [Here's a list](https://gith
 
 The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`.
 
-You can run `npm test` to make sure your code follows these rules and that the app runs without errors 😉.
+* Modify the code in `src` (javascript) or `static` (html/css)
+* Try your code
+    
+    `npm run build && npm start`
+    
+* Look for syntax errors (`xo`) and automatic testing (`ava`)
+
+    `npm test`
+
