@@ -44,7 +44,7 @@ The app is written in html/css/js and it's built in [electron](http://electron.a
 
 To use electron for creating a topbar app, I use [menubar](https://github.com/maxogden/menubar)
 
-To retrieve the battery data I use the [healthi npm module](https://github.com/pablopunk/healthi.js)
+To retrieve the battery data I use the [healthi npm module](https://github.com/pablopunk/healthi-js)
 
 ### Contribute
 
