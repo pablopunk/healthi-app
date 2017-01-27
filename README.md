@@ -7,7 +7,7 @@
 
 ##### Simple app to check your Mac Battery health.
 
-_healthi_ shows a small icon in your topbar with the current battery health of your mac, which is the percentage of your battery capacity compared to the original one.
+_healthi_ shows a small icon in your topbar with the current battery health of your mac, which is the percentage of your battery capacity compared to the original one
 
 - **90% - 100%**: Battery is good
 - **80% - 90%**:  Battery is ok but it should be replaced soon
@@ -15,47 +15,28 @@ _healthi_ shows a small icon in your topbar with the current battery health of y
 
 ![shot](https://raw.githubusercontent.com/pablopunk/healthi/master/img/screenshot.gif)
 
-### Download
+### download
 
-With [Homebrew Cask](https://caskroom.github.io) ▹ `brew cask install healthi`
+You can install it with [Homebrew Cask](https://caskroom.github.io) `brew cask install healthi`
 
-Or just [▼ Download](https://github.com/pablopunk/healthi/releases/latest)
+or
 
+[▼ Download here](https://github.com/pablopunk/healthi/releases/latest)
 
-### Run
-
-```shell
-npm install
-npm run build
-npm start
-```
-
-### Distribution
+### develop
 
 ```shell
-npm run pack # creates the .app inside dist/healthi-darwin-x64
+npm install   # install dependencies
+npm run build # build code with babel
+npm start     # start app
+npm run pack  # create .app inside dist
 ```
+### how
 
-### Technologies
-
-The app is written in html/css/js and it's built in [electron](http://electron.atom.io).
-
-To use electron for creating a topbar app, I use [menubar](https://github.com/maxogden/menubar)
+_healthi_ is built with web technologies in [electron](http://electron.atom.io) and [menubar](https://github.com/maxogden/menubar)
 
 To retrieve the battery data I use the [healthi npm module](https://github.com/pablopunk/healthi-js)
 
-### Contribute
+### contribute
 
-Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
-
-The only requirement is that you follow [XO code style](https://github.com/sindresorhus/xo) defined in `package.json`.
-
-* Modify the code in `src` (javascript) or `static` (html/css)
-* Try your code
-    
-    `npm run build && npm start`
-    
-* Look for syntax errors (`xo`) and automatic testing (`ava`)
-
-    `npm test`
-
+Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners
