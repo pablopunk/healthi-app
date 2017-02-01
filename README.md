@@ -39,4 +39,6 @@ To retrieve the battery data I use the [healthi npm module](https://github.com/p
 
 ### contribute
 
-Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners
+Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
+
+Special thanks to [the contributors](https://github.com/pablopunk/healthi-app/graphs/contributors)
