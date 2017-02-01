@@ -26,4 +26,3 @@ mb.on('after-hide', () => {
   console.log('window hidden')
   mb.window.loadURL(indexURL)
 })
-
