@@ -77,23 +77,19 @@ class Status extends React.Component {
   }
 
   render() {
-        return (
-          <div>
-            <div id="battery-color">
-            </div>
-            <div id="battery-health">
-              <i className="fa fa-circle-o-notch fa-spin">
-              </i>
-            </div>
-            <div id="message">
-            </div>
-            <a href="#" onClick={() => location.reload()}>
-              <i className="fa fa-refresh" aria-hidden="true">
-              </i>
-            </a>
+    return (
+      <div>
+        <div id="battery-color"/>
+        <div id="battery-health">
+          <i className="fa fa-circle-o-notch fa-spin"/>
         </div>
-      )
+        <div id="message"/>
+        <a href="#" onClick={location.reload()}>
+          <i className="fa fa-refresh" aria-hidden="true"/>
+        </a>
+      </div>
+    )
   }
 }
 
-ReactDOM.render(<Status />, document.getElementById('root'))
+ReactDOM.render(<Status/>, document.getElementById('root'))

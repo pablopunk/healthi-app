@@ -42,11 +42,14 @@
     "babel-preset-react": "^6.22.0",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.3",
+    "eslint-config-xo-react": "^0.10.0",
+    "eslint-plugin-react": "^6.9.0",
     "husky": "^0.13.1",
     "spectron": "^3.4.1",
     "xo": "^0.17.1"
   },
   "xo": {
+    "extends": "xo-react",
     "esnext": true,
     "semicolon": false,
     "space": true,
