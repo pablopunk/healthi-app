@@ -27,14 +27,6 @@ test('check window size', async t => {
   })
 })
 
-test('check window content', async t => {
-  app.client.browserWindow.isVisible().then(() => {
-    app.client.getText('#battery-health').then(text => {
-      t.true(text === '')
-    })
-  })
-})
-
 test('see if dev tools are closed', async t => {
   app.client.waitUntilWindowLoaded().then(() => {
     app.browserWindow.isDevToolsOpened(isOpen => {
