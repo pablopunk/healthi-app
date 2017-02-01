@@ -1,3 +1,5 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
 import health from 'healthi'
 
 const message = {
@@ -66,10 +68,32 @@ const updateBattery = percentage => {
   changeBatteryMessage(batteryColor)
 }
 
-const main = () => {
-  health(battery => {
-    updateBattery(battery.health)
-  })
+class Status extends React.Component {
+
+  componentDidMount() {
+    health(battery => {
+      updateBattery(battery.health)
+    })
+  }
+
+  render() {
+        return (
+          <div>
+            <div id="battery-color">
+            </div>
+            <div id="battery-health">
+              <i className="fa fa-circle-o-notch fa-spin">
+              </i>
+            </div>
+            <div id="message">
+            </div>
+            <a href="#" onClick={() => location.reload()}>
+              <i className="fa fa-refresh" aria-hidden="true">
+              </i>
+            </a>
+        </div>
+      )
+  }
 }
 
-module.exports = main
+ReactDOM.render(<Status />, document.getElementById('root'))

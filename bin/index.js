@@ -1,10 +1,26 @@
 'use strict';
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = require('react-dom');
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
 var _healthi = require('healthi');
 
 var _healthi2 = _interopRequireDefault(_healthi);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var message = {
   replace: 'Replace battery :(',
@@ -37,16 +53,6 @@ var getColor = function getColor(percentage) {
   return color.replace;
 };
 
-var updateBattery = function updateBattery(percentage) {
-  percentage = percentage.toFixed(0);
-  var batteryColor = getColor(percentage).battery;
-  var bodyColor = getColor(percentage).body;
-  changeBodyColor(bodyColor);
-  changeBatteryColor(batteryColor);
-  changeBatteryPercentage(percentage);
-  changeBatteryMessage(batteryColor);
-};
-
 var changeBodyColor = function changeBodyColor(backgroundColor) {
   document.body.style.backgroundColor = backgroundColor;
 };
@@ -72,10 +78,58 @@ var changeBatteryMessage = function changeBatteryMessage(batteryColor) {
   document.getElementById('message').innerHTML = newMessage;
 };
 
-var main = function main() {
-  (0, _healthi2.default)(function (battery) {
-    updateBattery(battery.health);
-  });
+var updateBattery = function updateBattery(percentage) {
+  percentage = percentage.toFixed(0);
+  var batteryColor = getColor(percentage).battery;
+  var bodyColor = getColor(percentage).body;
+  changeBodyColor(bodyColor);
+  changeBatteryColor(batteryColor);
+  changeBatteryPercentage(percentage);
+  changeBatteryMessage(batteryColor);
 };
 
-module.exports = main;
+var Status = function (_React$Component) {
+  _inherits(Status, _React$Component);
+
+  function Status() {
+    _classCallCheck(this, Status);
+
+    return _possibleConstructorReturn(this, (Status.__proto__ || Object.getPrototypeOf(Status)).apply(this, arguments));
+  }
+
+  _createClass(Status, [{
+    key: 'componentDidMount',
+    value: function componentDidMount() {
+      console.log('Mounting component', new Date().toISOString());
+      (0, _healthi2.default)(function (battery) {
+        updateBattery(battery.health);
+      });
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        null,
+        _react2.default.createElement('div', { id: 'battery-color' }),
+        _react2.default.createElement(
+          'div',
+          { id: 'battery-health' },
+          _react2.default.createElement('i', { className: 'fa fa-circle-o-notch fa-spin' })
+        ),
+        _react2.default.createElement('div', { id: 'message' }),
+        _react2.default.createElement(
+          'a',
+          { href: '#', onClick: function onClick() {
+              return location.reload();
+            } },
+          _react2.default.createElement('i', { className: 'fa fa-refresh', 'aria-hidden': 'true' })
+        )
+      );
+    }
+  }]);
+
+  return Status;
+}(_react2.default.Component);
+
+_reactDom2.default.render(_react2.default.createElement(Status, null), document.getElementById('root'));
