@@ -5,7 +5,7 @@
   "main": "static/js/app.js",
   "scripts": {
     "build": "babel src --presets babel-preset-es2015,react --out-dir static/js",
-    "pack": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
+    "pack": "npm run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "npm run build && electron .",
     "test": "xo",
     "prepush": "npm run test"
