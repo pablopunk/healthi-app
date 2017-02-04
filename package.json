@@ -7,8 +7,8 @@
     "build": "babel src --presets babel-preset-es2015,react --out-dir static/js",
     "pack": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "npm run build && electron .",
-    "test": "npm run build && xo && ava",
-    "prepush": "npm test"
+    "test": "xo",
+    "prepush": "npm run test"
   },
   "repository": {
     "type": "git",
@@ -38,7 +38,6 @@
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
-    "ava": "^0.17.0",
     "babel-cli": "^6.18.0",
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.22.0",
@@ -47,7 +46,6 @@
     "eslint-config-xo-react": "^0.10.0",
     "eslint-plugin-react": "^6.9.0",
     "husky": "^0.13.1",
-    "spectron": "^3.4.1",
     "xo": "^0.17.1"
   },
   "xo": {
