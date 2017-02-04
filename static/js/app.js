@@ -12,13 +12,13 @@ var _menubar2 = _interopRequireDefault(_menubar);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var indexPath = _path2.default.join(__dirname, '..', 'static');
+var indexPath = _path2.default.join(__dirname, '..');
 var indexURL = 'file://' + indexPath + '/index.html';
 
 var mb = (0, _menubar2.default)({
   width: 200,
   height: 90,
-  icon: _path2.default.join(__dirname, '..', 'img', 'topbarTemplate.png'),
+  icon: _path2.default.join(__dirname, '..', '..', 'img', 'topbarTemplate.png'),
   dir: indexPath,
   showDockIcon: true
 });

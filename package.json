@@ -2,12 +2,12 @@
   "name": "healthi-app",
   "version": "1.4.0",
   "description": "Simple app to check your Mac Battery health.",
-  "main": "bin/app.js",
+  "main": "static/js/app.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015,react --out-dir bin",
+    "build": "babel src --presets babel-preset-es2015,react --out-dir static/js",
     "pack": "electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
-    "start": "electron .",
-    "test": "npm build && xo && ava",
+    "start": "npm run build && electron .",
+    "test": "npm run build && xo && ava",
     "prepush": "npm test"
   },
   "repository": {
@@ -29,10 +29,12 @@
   },
   "homepage": "https://github.com/pablopunk/healthi-app#readme",
   "dependencies": {
+    "babel-plugin-relative-import": "^1.0.3",
     "electron": "^1.4.3",
     "healthi": "^1.0.4",
     "menubar": "^5.1.0",
     "react": "^15.4.2",
+    "react-animated-number": "^0.4.2",
     "react-dom": "^15.4.2"
   },
   "devDependencies": {
@@ -54,13 +56,27 @@
     "semicolon": false,
     "space": true,
     "ignores": [
-      "bin/**"
+      "static/js/**"
     ],
     "envs": [
       "browser"
     ],
     "rules": {
-      "new-cap": 0
+      "new-cap": 0,
+      "react/prop-types": 0,
+      "import/no-unresolved": 0,
+      "react/jsx-no-bind": 0,
+      "react/forbid-component-props": 0
     }
+  },
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-relative-import",
+        {
+          "rootPathSuffix": "static/js"
+        }
+      ]
+    ]
   }
 }
