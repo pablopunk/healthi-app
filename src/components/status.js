@@ -1,11 +1,5 @@
-//
-// Notice: I'm using AnimatedNumber for animating
-// both the numbers and the text. This is a workaround
-// for componentDidMount() not animating properly
-//
-
+import React from 'react'          
 import AnimatedNumber from 'react-animated-number'
-import React from 'react'
 import Fade from 'react-fade'
 import health from 'healthi'
 
