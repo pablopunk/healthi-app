@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactFade = require('react-fade');
+
+var _reactFade2 = _interopRequireDefault(_reactFade);
+
 var _healthi = require('healthi');
 
 var _healthi2 = _interopRequireDefault(_healthi);
@@ -29,6 +33,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 // both the numbers and the text. This is a workaround
 // for componentDidMount() not animating properly
 //
+
+var animationTime = 1;
 
 var battery = {
   good: {
@@ -46,7 +52,7 @@ var battery = {
 };
 
 var animatedStyle = {
-  transition: '1s ease-out',
+  transition: animationTime + 's ease-out',
   transitionProperty: 'opacity'
 };
 
@@ -63,8 +69,8 @@ var Status = function (_React$Component) {
   }
 
   _createClass(Status, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
+    key: 'componentDidMount',
+    value: function componentDidMount() {
       var _this2 = this;
 
       (0, _healthi2.default)(function (battery) {
@@ -85,8 +91,6 @@ var Status = function (_React$Component) {
   }, {
     key: 'render',
     value: function render() {
-      var _this3 = this;
-
       if (this.state.health === undefined) {
         return _react2.default.createElement(
           'div',
@@ -101,15 +105,12 @@ var Status = function (_React$Component) {
           style: { backgroundColor: battery[this.state.health].color }
         },
         _react2.default.createElement(
-          'div',
-          { id: 'battery-health' },
+          _reactFade2.default,
+          { id: 'battery-health', duration: animationTime },
           _react2.default.createElement(_reactAnimatedNumber2.default, {
             component: 'text', value: Math.floor(this.state.percentage),
             style: animatedStyle,
-            frameStyle: function frameStyle(perc) {
-              return perc ? { opacity: perc / 100 } : { opacity: 0 };
-            },
-            duration: 1000,
+            duration: animationTime * 1000,
             formatValue: function formatValue(n) {
               return n + '%';
             },
@@ -117,19 +118,9 @@ var Status = function (_React$Component) {
           })
         ),
         _react2.default.createElement(
-          'div',
-          { id: 'battery-message' },
-          _react2.default.createElement(_reactAnimatedNumber2.default, {
-            component: 'text', value: Math.floor(this.state.percentage),
-            style: animatedStyle,
-            frameStyle: function frameStyle(perc) {
-              return perc ? { opacity: perc / 100 } : { opacity: 0 };
-            },
-            duration: 1000,
-            formatValue: function formatValue() {
-              return battery[_this3.state.health].message;
-            }
-          })
+          _reactFade2.default,
+          { id: 'battery-message', duration: animationTime },
+          battery[this.state.health].message
         )
       );
     }

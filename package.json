@@ -32,10 +32,12 @@
     "babel-plugin-relative-import": "^1.0.3",
     "electron": "^1.4.3",
     "healthi": "^1.0.4",
+    "inline-style-prefixer": "^2.0.5",
     "menubar": "^5.1.0",
     "react": "^15.4.2",
     "react-animated-number": "^0.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-fade": "^1.1.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",

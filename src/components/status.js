@@ -6,7 +6,10 @@
 
 import AnimatedNumber from 'react-animated-number'
 import React from 'react'
+import Fade from 'react-fade'
 import health from 'healthi'
+
+const animationTime = 1
 
 const battery = {
   good: {
@@ -24,7 +27,7 @@ const battery = {
 }
 
 const animatedStyle = {
-  transition: '1s ease-out',
+  transition: `${animationTime}s ease-out`,
   transitionProperty: 'opacity'
 }
 
@@ -34,7 +37,7 @@ export default class Status extends React.Component {
     this.state = {health: undefined}
   }
 
-  componentWillMount() {
+  componentDidMount() {
     health(battery => {
       let batteryStatus
       if (battery.health < 80) {
@@ -64,29 +67,18 @@ export default class Status extends React.Component {
         id="status"
         style={{backgroundColor: battery[this.state.health].color}}
         >
-        <div id="battery-health">
+        <Fade id="battery-health" duration={animationTime}>
           <AnimatedNumber
             component="text" value={Math.floor(this.state.percentage)}
             style={animatedStyle}
-            frameStyle={perc => (
-              perc ? {opacity: perc / 100} : {opacity: 0}
-            )}
-            duration={1000}
+            duration={animationTime * 1000}
             formatValue={n => n + '%'}
             stepPrecision={0}
             />
-        </div>
-        <div id="battery-message">
-          <AnimatedNumber
-            component="text" value={Math.floor(this.state.percentage)}
-            style={animatedStyle}
-            frameStyle={perc => (
-              perc ? {opacity: perc / 100} : {opacity: 0}
-            )}
-            duration={1000}
-            formatValue={() => battery[this.state.health].message}
-            />
-        </div>
+        </Fade>
+        <Fade id="battery-message" duration={animationTime}>
+          {battery[this.state.health].message}
+        </Fade>
       </div>
     )
   }
