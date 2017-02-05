@@ -1,4 +1,4 @@
-import React from 'react'          
+import React from 'react'
 import AnimatedNumber from 'react-animated-number'
 import Fade from 'react-fade'
 import health from 'healthi'
