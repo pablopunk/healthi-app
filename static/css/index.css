@@ -12,6 +12,12 @@ body, html {
   height: 4em;
 }
 
+#status i {
+  margin-top: .5em;
+  font-size: 3em;
+  color: white;
+}
+
 #battery-health {
   font-size: 3em;
   color: #ecf0f1;

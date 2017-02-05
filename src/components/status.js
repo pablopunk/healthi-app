@@ -6,6 +6,7 @@
 
 import AnimatedNumber from 'react-animated-number'
 import React from 'react'
+import health from 'healthi'
 
 const battery = {
   good: {
@@ -28,25 +29,44 @@ const animatedStyle = {
 }
 
 export default class Status extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {health: undefined}
+  }
+
+  componentWillMount() {
+    health(battery => {
+      let batteryStatus
+      if (battery.health < 80) {
+        batteryStatus = 'replace'
+      } else if (battery.health < 90) {
+        batteryStatus = 'soon'
+      } else {
+        batteryStatus = 'good'
+      }
+      this.setState({
+        health: batteryStatus,
+        percentage: battery.health
+      })
+    })
+  }
+
   render() {
-    let batteryStatus = ''
-
-    if (this.props.percentage < 80) {
-      batteryStatus = 'replace'
-    } else if (this.props.percentage < 90) {
-      batteryStatus = 'soon'
-    } else {
-      batteryStatus = 'good'
+    if (this.state.health === undefined) {
+      return (
+        <div id="status">
+          <i className="fa fa-spinner fa-spin"/>
+        </div>
+      )
     }
-
     return (
       <div
         id="status"
-        style={{backgroundColor: battery[batteryStatus].color}}
+        style={{backgroundColor: battery[this.state.health].color}}
         >
         <div id="battery-health">
           <AnimatedNumber
-            component="text" value={Math.floor(this.props.percentage)}
+            component="text" value={Math.floor(this.state.percentage)}
             style={animatedStyle}
             frameStyle={perc => (
               perc ? {opacity: perc / 100} : {opacity: 0}
@@ -58,13 +78,13 @@ export default class Status extends React.Component {
         </div>
         <div id="battery-message">
           <AnimatedNumber
-            component="text" value={Math.floor(this.props.percentage)}
+            component="text" value={Math.floor(this.state.percentage)}
             style={animatedStyle}
             frameStyle={perc => (
               perc ? {opacity: perc / 100} : {opacity: 0}
             )}
             duration={1000}
-            formatValue={() => battery[batteryStatus].message}
+            formatValue={() => battery[this.state.health].message}
             />
         </div>
       </div>

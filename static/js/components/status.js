@@ -14,6 +14,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _healthi = require('healthi');
+
+var _healthi2 = _interopRequireDefault(_healthi);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -49,36 +53,58 @@ var animatedStyle = {
 var Status = function (_React$Component) {
   _inherits(Status, _React$Component);
 
-  function Status() {
+  function Status(props) {
     _classCallCheck(this, Status);
 
-    return _possibleConstructorReturn(this, (Status.__proto__ || Object.getPrototypeOf(Status)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Status.__proto__ || Object.getPrototypeOf(Status)).call(this, props));
+
+    _this.state = { health: undefined };
+    return _this;
   }
 
   _createClass(Status, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      var _this2 = this;
+
+      (0, _healthi2.default)(function (battery) {
+        var batteryStatus = void 0;
+        if (battery.health < 80) {
+          batteryStatus = 'replace';
+        } else if (battery.health < 90) {
+          batteryStatus = 'soon';
+        } else {
+          batteryStatus = 'good';
+        }
+        _this2.setState({
+          health: batteryStatus,
+          percentage: battery.health
+        });
+      });
+    }
+  }, {
     key: 'render',
     value: function render() {
-      var batteryStatus = '';
+      var _this3 = this;
 
-      if (this.props.percentage < 80) {
-        batteryStatus = 'replace';
-      } else if (this.props.percentage < 90) {
-        batteryStatus = 'soon';
-      } else {
-        batteryStatus = 'good';
+      if (this.state.health === undefined) {
+        return _react2.default.createElement(
+          'div',
+          { id: 'status' },
+          _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin' })
+        );
       }
-
       return _react2.default.createElement(
         'div',
         {
           id: 'status',
-          style: { backgroundColor: battery[batteryStatus].color }
+          style: { backgroundColor: battery[this.state.health].color }
         },
         _react2.default.createElement(
           'div',
           { id: 'battery-health' },
           _react2.default.createElement(_reactAnimatedNumber2.default, {
-            component: 'text', value: Math.floor(this.props.percentage),
+            component: 'text', value: Math.floor(this.state.percentage),
             style: animatedStyle,
             frameStyle: function frameStyle(perc) {
               return perc ? { opacity: perc / 100 } : { opacity: 0 };
@@ -94,14 +120,14 @@ var Status = function (_React$Component) {
           'div',
           { id: 'battery-message' },
           _react2.default.createElement(_reactAnimatedNumber2.default, {
-            component: 'text', value: Math.floor(this.props.percentage),
+            component: 'text', value: Math.floor(this.state.percentage),
             style: animatedStyle,
             frameStyle: function frameStyle(perc) {
               return perc ? { opacity: perc / 100 } : { opacity: 0 };
             },
             duration: 1000,
             formatValue: function formatValue() {
-              return battery[batteryStatus].message;
+              return battery[_this3.state.health].message;
             }
           })
         )
