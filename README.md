@@ -5,7 +5,7 @@
 
 ![img](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
 
-> _Simple app to check your Mac Battery health._
+> _Simple app to check your Mac's Battery health._
 
 ![shot](https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif)
 
