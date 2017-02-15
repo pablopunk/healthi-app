@@ -4,7 +4,7 @@
   "description": "Simple app to check your Mac Battery health.",
   "main": "static/js/app.js",
   "scripts": {
-    "build": "babel src --presets babel-preset-es2015,react --out-dir static/js",
+    "build": "babel src --presets electron,react --out-dir static/js",
     "pack": "npm run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "npm run build && electron .",
     "test": "xo",
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
-    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-electron": "^0.37.8",
     "babel-preset-react": "^6.22.0",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.3",
