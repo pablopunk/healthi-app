@@ -1,6 +1,6 @@
 # 💚💛❤️ healthi ⚡️
 
-[![Downloads](https://img.shields.io/github/downloads/pablopunk/healthi-app/total.svg)](https://github.com/pablopunk/healthi-app)
+[![Downloads](https://img.shields.io/github/downloads/pablopunk/healthi-app/total.svg)](https://github.com/pablopunk/healthi-app#download)
 [![Build Status](https://travis-ci.org/pablopunk/healthi-app.svg?branch=master)](https://travis-ci.org/pablopunk/healthi-app)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
