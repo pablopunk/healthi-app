@@ -7,6 +7,11 @@ body, html {
     background-color: #34495e;
 }
 
+#content {
+  width: 100%;
+  height: 100%;
+}
+
 #status {
   text-align: center;
   height: 4em;
@@ -25,4 +30,21 @@ body, html {
 
 #battery-message {
   color: #ecf0f1;
+}
+
+#buttons {
+  position: absolute;
+}
+
+.button {
+  display: inline;
+  font-size: 1em;
+  color: white;
+  margin-left: .2em;
+  padding: .2em;
+  vertical-align: middle;
+}
+
+.button:hover {
+  color: red;
 }

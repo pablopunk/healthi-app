@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom'
 import React from 'react'
-import Status from '~/components/status'
+import Content from '~/components/content'
 
 ReactDOM.render(
-  <Status/>,
-  document.getElementById('status')
+  <Content/>,
+  document.getElementById('content')
 )

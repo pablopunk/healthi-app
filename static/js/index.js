@@ -8,10 +8,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _status = require('./../static/js/components/status');
+var _content = require('./../static/js/components/content');
 
-var _status2 = _interopRequireDefault(_status);
+var _content2 = _interopRequireDefault(_content);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_reactDom2.default.render(_react2.default.createElement(_status2.default, null), document.getElementById('status'));
+_reactDom2.default.render(_react2.default.createElement(_content2.default, null), document.getElementById('content'));
