@@ -1,5 +1,4 @@
 import path from 'path'
-import {globalShortcut} from 'electron'
 import menubar from 'menubar'
 
 const indexPath = path.join(__dirname, '..')
@@ -17,9 +16,6 @@ mb.on('ready', () => {
   console.log('app is ready')
   mb.showWindow()
   mb.app.dock.hide()
-  globalShortcut.register('CommandOrControl+Alt+I', () => {
-    mb.window.toggleDevTools()
-  })
 })
 
 mb.on('after-hide', () => {

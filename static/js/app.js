@@ -4,8 +4,6 @@ var _path = require('path');
 
 var _path2 = _interopRequireDefault(_path);
 
-var _electron = require('electron');
-
 var _menubar = require('menubar');
 
 var _menubar2 = _interopRequireDefault(_menubar);
@@ -27,9 +25,6 @@ mb.on('ready', () => {
   console.log('app is ready');
   mb.showWindow();
   mb.app.dock.hide();
-  _electron.globalShortcut.register('CommandOrControl+Alt+I', () => {
-    mb.window.toggleDevTools();
-  });
 });
 
 mb.on('after-hide', () => {
