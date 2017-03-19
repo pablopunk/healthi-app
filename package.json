@@ -31,7 +31,7 @@
   "dependencies": {
     "babel-plugin-relative-import": "^1.0.3",
     "electron": "^1.4.3",
-    "healthi": "^1.0.4",
+    "healthi": "1.0.7",
     "inline-style-prefixer": "^3.0.2",
     "menubar": "^5.1.0",
     "react": "^15.4.2",
