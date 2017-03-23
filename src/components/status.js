@@ -63,7 +63,8 @@ export default class Status extends React.Component {
         >
         <Fade id="battery-health" duration={animationTime}>
           <AnimatedNumber
-            component="text" value={Math.floor(this.state.percentage)}
+            component="text"
+            value={Math.floor(this.state.percentage)}
             style={animatedStyle}
             duration={animationTime * 1000}
             formatValue={n => n + '%'}
