@@ -85,7 +85,8 @@ class Status extends _react2.default.Component {
         _reactFade2.default,
         { id: 'battery-health', duration: animationTime },
         _react2.default.createElement(_reactAnimatedNumber2.default, {
-          component: 'text', value: Math.floor(this.state.percentage),
+          component: 'text',
+          value: Math.floor(this.state.percentage),
           style: animatedStyle,
           duration: animationTime * 1000,
           formatValue: n => n + '%',
