@@ -7,7 +7,7 @@
     "build": "babel src --presets electron,react --out-dir static/js",
     "pack": "yarn run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "yarn run build && electron .",
-    "test": "xo",
+    "test": "standard src/**/*.js",
     "prepush": "yarn run test"
   },
   "repository": {
@@ -37,7 +37,8 @@
     "react": "^15.4.2",
     "react-animated-number": "^0.4.2",
     "react-dom": "^15.4.2",
-    "react-fade": "^1.1.1"
+    "react-fade": "^1.1.1",
+    "standard": "^10.0.1"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
@@ -45,29 +46,7 @@
     "babel-preset-react": "^6.22.0",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.3",
-    "eslint-config-xo-react": "^0.11.0",
-    "eslint-plugin-react": "^6.10.1",
-    "husky": "^0.13.3",
-    "xo": "^0.19.0"
-  },
-  "xo": {
-    "extends": "xo-react",
-    "esnext": true,
-    "semicolon": false,
-    "space": true,
-    "ignores": [
-      "static/js/**"
-    ],
-    "envs": [
-      "browser"
-    ],
-    "rules": {
-      "new-cap": 0,
-      "react/prop-types": 0,
-      "import/no-unresolved": 0,
-      "react/jsx-no-bind": 0,
-      "react/forbid-component-props": 0
-    }
+    "husky": "^0.13.3"
   },
   "babel": {
     "plugins": [

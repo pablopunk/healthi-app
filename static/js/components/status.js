@@ -1,28 +1,28 @@
-'use strict';
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
+})
 
-var _react = require('react');
+var _react = require('react')
 
-var _react2 = _interopRequireDefault(_react);
+var _react2 = _interopRequireDefault(_react)
 
-var _reactAnimatedNumber = require('react-animated-number');
+var _reactAnimatedNumber = require('react-animated-number')
 
-var _reactAnimatedNumber2 = _interopRequireDefault(_reactAnimatedNumber);
+var _reactAnimatedNumber2 = _interopRequireDefault(_reactAnimatedNumber)
 
-var _reactFade = require('react-fade');
+var _reactFade = require('react-fade')
 
-var _reactFade2 = _interopRequireDefault(_reactFade);
+var _reactFade2 = _interopRequireDefault(_reactFade)
 
-var _healthi = require('healthi');
+var _healthi = require('healthi')
 
-var _healthi2 = _interopRequireDefault(_healthi);
+var _healthi2 = _interopRequireDefault(_healthi)
 
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+function _interopRequireDefault (obj) { return obj && obj.__esModule ? obj : { default: obj } }
 
-const animationTime = 1;
+const animationTime = 1
 
 const battery = {
   good: {
@@ -37,43 +37,43 @@ const battery = {
     message: 'replace battery :(',
     color: '#e74c3c'
   }
-};
+}
 
 const animatedStyle = {
   transition: `${animationTime}s ease-out`,
   transitionProperty: 'opacity'
-};
+}
 
 class Status extends _react2.default.Component {
-  constructor(props) {
-    super(props);
-    this.state = { health: undefined };
+  constructor (props) {
+    super(props)
+    this.state = { health: undefined }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     (0, _healthi2.default)(battery => {
-      let batteryStatus;
+      let batteryStatus
       if (battery.health < 80) {
-        batteryStatus = 'replace';
+        batteryStatus = 'replace'
       } else if (battery.health < 90) {
-        batteryStatus = 'soon';
+        batteryStatus = 'soon'
       } else {
-        batteryStatus = 'good';
+        batteryStatus = 'good'
       }
       this.setState({
         health: batteryStatus,
         percentage: battery.health
-      });
-    });
+      })
+    })
   }
 
-  render() {
+  render () {
     if (this.state.health === undefined) {
       return _react2.default.createElement(
         'div',
         { id: 'status' },
         _react2.default.createElement('i', { className: 'fa fa-spinner fa-spin' })
-      );
+      )
     }
     return _react2.default.createElement(
       'div',
@@ -98,7 +98,7 @@ class Status extends _react2.default.Component {
         { id: 'battery-message', duration: animationTime },
         battery[this.state.health].message
       )
-    );
+    )
   }
 }
-exports.default = Status;
+exports.default = Status

@@ -4,11 +4,11 @@ import Status from './status'
 import Buttons from './buttons'
 
 export default class Content extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {mouseEnter: false}
   }
-  render() {
+  render () {
     return (
       <div
         onMouseEnter={() => this.setState({mouseEnter: true})}
@@ -16,10 +16,10 @@ export default class Content extends React.Component {
         >
         {this.state.mouseEnter &&
           <Fade duration={0.1}>
-            <Buttons/>
+            <Buttons />
           </Fade>
         }
-        <Status/>
+        <Status />
       </div>
     )
   }

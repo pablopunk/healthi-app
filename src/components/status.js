@@ -26,12 +26,12 @@ const animatedStyle = {
 }
 
 export default class Status extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props)
     this.state = {health: undefined}
   }
 
-  componentDidMount() {
+  componentDidMount () {
     health(battery => {
       let batteryStatus
       if (battery.health < 80) {
@@ -48,22 +48,22 @@ export default class Status extends React.Component {
     })
   }
 
-  render() {
+  render () {
     if (this.state.health === undefined) {
       return (
-        <div id="status">
-          <i className="fa fa-spinner fa-spin"/>
+        <div id='status'>
+          <i className='fa fa-spinner fa-spin' />
         </div>
       )
     }
     return (
       <div
-        id="status"
+        id='status'
         style={{backgroundColor: battery[this.state.health].color}}
         >
-        <Fade id="battery-health" duration={animationTime}>
+        <Fade id='battery-health' duration={animationTime}>
           <AnimatedNumber
-            component="text"
+            component='text'
             value={Math.floor(this.state.percentage)}
             style={animatedStyle}
             duration={animationTime * 1000}
@@ -71,7 +71,7 @@ export default class Status extends React.Component {
             stepPrecision={0}
             />
         </Fade>
-        <Fade id="battery-message" duration={animationTime}>
+        <Fade id='battery-message' duration={animationTime}>
           {battery[this.state.health].message}
         </Fade>
       </div>
