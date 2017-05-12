@@ -44,7 +44,8 @@ Also, you could fix/improve it yourself:
 1. You can either have an idea to improve the app or search for [an issue][issues]
 2. [Fork][fork] the repo
 3. Code your changes and try them `npm run build && npm run start`
-4. Submit your [pull request][pr]
+4. Run the tests for code syntax errors `npm run test`
+5. Submit your [pull request][pr]
 
 [issues]: https://github.com/pablopunk/healthi-app/issues
 [fork]: https://help.github.com/articles/fork-a-repo/
