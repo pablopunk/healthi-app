@@ -1,10 +1,10 @@
 # 💚💛❤️ healthi ⚡️
 
 <p align="center">
-	<img src="https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png" alt="Logo" />
 	<a href="https://github.com/pablopunk/healthi-app#download"><img src="https://img.shields.io/github/downloads/pablopunk/healthi-app/total.svg" alt="Downloads" /></a>
 	<a href="https://travis-ci.org/pablopunk/healthi-app"><img src="https://travis-ci.org/pablopunk/healthi-app.svg?branch=master" alt="Build Status" /></a>
 	<a href="https://github.com/feross/standard"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Code Style" /></a>
+	<img src="https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png" alt="Logo" />
 	<p align="center">Simple app to check your Mac's Battery health.</p>
 	<p align="center"><img src="https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif" alt="screenshot" /></p>
 </p>
@@ -37,6 +37,22 @@ To retrieve the battery data I use the [healthi npm module](https://github.com/p
 
 # contribute
 
-Feel free to fork the repo and make a pull request. [Here's a list](https://github.com/pablopunk/healthi/issues?q=is%3Aissue+is%3Aopen+label%3Abeginner) of issues for beginners.
+You can [open an issue][issues] to report any bug or improvement.
 
-Special thanks to [the contributors](https://github.com/pablopunk/healthi-app/graphs/contributors)
+Also, you could fix/improve it yourself:
+
+1. You can either have an idea to improve the app or search for [an issue][issues]
+2. [Fork][fork] the repo
+3. Code your changes and try them `npm run build && npm run start`
+4. Submit your [pull request][pr]
+
+[issues]: https://github.com/pablopunk/healthi-app/issues
+[fork]: https://help.github.com/articles/fork-a-repo/
+[contributors]: https://github.com/pablopunk/healthi-app/graphs/contributors
+[pr]: https://help.github.com/articles/creating-a-pull-request/
+
+# author
+
+© 2017 [Pablo Varela](https://twitter.com/pablopunk)
+
+**Special thanks** to [the contributors][contributors]
