@@ -1,6 +1,6 @@
 {
   "name": "healthi-app",
-  "version": "2.2.0",
+  "version": "2.2.1",
   "description": "Simple app to check your Mac Battery health.",
   "main": "static/js/app.js",
   "scripts": {
