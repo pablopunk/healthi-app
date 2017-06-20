@@ -4,10 +4,10 @@
   "description": "Simple app to check your Mac Battery health.",
   "main": "static/js/app.js",
   "scripts": {
-    "build": "babel src --presets electron,react --out-dir static/js",
+    "build": "babel src --out-dir static/js",
     "pack": "yarn run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "yarn run build && electron .",
-    "test": "standard src/**/*.js && ava",
+    "test": "standard src/**/*.js && jest jest && ava __tests__/spectron.js",
     "prepush": "yarn run test"
   },
   "repository": {
@@ -49,10 +49,17 @@
     "babel-preset-react": "^6.22.0",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.13",
+    "enzyme": "^2.8.2",
     "husky": "^0.13.3",
+    "jest-cli": "^20.0.4",
+    "react-addons-test-utils": "^15.6.0",
     "spectron": "^3.6.4"
   },
   "babel": {
+    "presets": [
+      "electron",
+      "react"
+    ],
     "plugins": [
       [
         "babel-plugin-relative-import",

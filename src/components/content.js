@@ -11,12 +11,13 @@ export default class Content extends React.Component {
   render () {
     return (
       <div
+        id='content'
         onMouseEnter={() => this.setState({mouseEnter: true})}
         onMouseLeave={() => this.setState({mouseEnter: false})}
         >
         {this.state.mouseEnter &&
           <Fade duration={0.1}>
-            <Buttons />
+            <Buttons app={this.props.app} />
           </Fade>
         }
         <Status />

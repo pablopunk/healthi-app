@@ -31,13 +31,14 @@ class Content extends _react2.default.Component {
     return _react2.default.createElement(
       'div',
       {
+        id: 'content',
         onMouseEnter: () => this.setState({ mouseEnter: true }),
         onMouseLeave: () => this.setState({ mouseEnter: false })
       },
       this.state.mouseEnter && _react2.default.createElement(
         _reactFade2.default,
         { duration: 0.1 },
-        _react2.default.createElement(_buttons2.default, null)
+        _react2.default.createElement(_buttons2.default, { app: this.props.app })
       ),
       _react2.default.createElement(_status2.default, null)
     );
