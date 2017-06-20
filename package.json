@@ -7,7 +7,7 @@
     "build": "babel src --presets electron,react --out-dir static/js",
     "pack": "yarn run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "yarn run build && electron .",
-    "test": "standard src/**/*.js",
+    "test": "standard src/**/*.js && ava",
     "prepush": "yarn run test"
   },
   "repository": {
@@ -43,12 +43,14 @@
     "standard": "^10.0.1"
   },
   "devDependencies": {
+    "ava": "^0.19.1",
     "babel-cli": "^6.18.0",
     "babel-preset-electron": "^1.4.15",
     "babel-preset-react": "^6.22.0",
     "electron-packager": "^8.1.0",
-    "electron-prebuilt": "^1.4.3",
-    "husky": "^0.13.3"
+    "electron-prebuilt": "^1.4.13",
+    "husky": "^0.13.3",
+    "spectron": "^3.6.4"
   },
   "babel": {
     "plugins": [
