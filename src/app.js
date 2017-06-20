@@ -6,7 +6,7 @@ const indexURL = 'file://' + indexPath + '/index.html'
 
 const mb = menubar({
   width: 200,
-  height: 90,
+  height: 88,
   icon: path.join(__dirname, '..', '..', 'img', 'topbarTemplate.png'),
   dir: indexPath,
   showDockIcon: true

@@ -2,6 +2,7 @@ import React from 'react'
 import AnimatedNumber from 'react-animated-number'
 import Fade from 'react-fade'
 import health from 'healthi'
+import {ThreeBounce} from 'better-react-spinkit'
 
 const animationTime = 1
 
@@ -52,28 +53,32 @@ export default class Status extends React.Component {
     if (this.state.health === undefined) {
       return (
         <div id='status'>
-          <i className='fa fa-spinner fa-spin' />
+          <ThreeBounce gutter={10} color='white' />
         </div>
       )
     }
     return (
-      <div
-        id='status'
-        style={{backgroundColor: battery[this.state.health].color}}
-        >
-        <Fade id='battery-health' duration={animationTime}>
-          <AnimatedNumber
-            component='text'
-            value={Math.floor(this.state.percentage)}
-            style={animatedStyle}
-            duration={animationTime * 1000}
-            formatValue={n => n + '%'}
-            stepPrecision={0}
-            />
-        </Fade>
-        <Fade id='battery-message' duration={animationTime}>
-          {battery[this.state.health].message}
-        </Fade>
+      <div>
+        <div
+          id='status'
+          style={{backgroundColor: battery[this.state.health].color}}
+          >
+          <Fade id='battery-health' duration={animationTime}>
+            <AnimatedNumber
+              component='text'
+              value={Math.floor(this.state.percentage)}
+              style={animatedStyle}
+              duration={animationTime * 1000}
+              formatValue={n => n + '%'}
+              stepPrecision={0}
+              />
+          </Fade>
+        </div>
+        <div id='battery-message'>
+          <Fade duration={animationTime}>
+            {battery[this.state.health].message}
+          </Fade>
+        </div>
       </div>
     )
   }

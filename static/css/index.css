@@ -8,13 +8,16 @@ body, html {
 }
 
 #content {
-  width: 100%;
-  height: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: stretch;
 }
 
 #status {
   text-align: center;
-  height: 4em;
 }
 
 #status i {
@@ -30,6 +33,7 @@ body, html {
 
 #battery-message {
   color: #ecf0f1;
+  text-align: center;
 }
 
 #buttons {
