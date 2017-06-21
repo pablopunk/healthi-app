@@ -18,7 +18,7 @@ class Buttons extends _react2.default.Component {
       _react2.default.createElement(
         'div',
         { className: 'button', onClick: () => this.props.app.quit() },
-        _react2.default.createElement('i', { className: 'fa fa-times', 'aria-hidden': 'true' })
+        _react2.default.createElement('img', { src: './img/close.svg', width: '20px' })
       )
     );
   }

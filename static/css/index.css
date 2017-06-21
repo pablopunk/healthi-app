@@ -41,14 +41,14 @@ body, html {
 }
 
 .button {
-  display: inline;
+  display: inline-block;
   font-size: 1em;
   color: white;
   margin-left: .2em;
-  padding: .2em;
+  margin: .4em;
   vertical-align: middle;
 }
 
 .button:hover {
-  color: red;
+  opacity: .5;
 }
