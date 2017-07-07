@@ -1,5 +1,3 @@
-# 💚💛❤️ healthi ⚡️
-
 <p align="center">
 	<img src="https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png" alt="Logo" />
 	<a href="https://github.com/pablopunk/healthi-app#download"><img src="https://img.shields.io/github/downloads/pablopunk/healthi-app/total.svg" alt="Downloads" /></a>
