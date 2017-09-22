@@ -2,7 +2,7 @@ import React from 'react'
 import AnimatedNumber from 'react-animated-number'
 import Fade from 'react-fade'
 import health from 'healthi'
-import {ThreeBounce} from 'better-react-spinkit'
+import { ThreeBounce } from 'better-react-spinkit'
 
 const animationTime = 1
 
@@ -27,54 +27,53 @@ const animatedStyle = {
 }
 
 export default class Status extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.state = {health: undefined}
+    this.state = { health: undefined }
   }
 
-  componentDidMount () {
-    health(battery => {
+  componentDidMount() {
+    health().then(({ health }) => {
       let batteryStatus
-      if (battery.health > 80) {
+      if (health > 80) {
         batteryStatus = 'good'
-      } else if (battery.health < 80 && battery.health >= 50) {
+      } else if (health < 80 && health >= 50) {
         batteryStatus = 'medium'
       } else {
         batteryStatus = 'bad'
       }
       this.setState({
         health: batteryStatus,
-        percentage: battery.health
+        percentage: health
       })
     })
   }
 
-  render () {
+  render() {
     if (this.state.health === undefined) {
       return (
-        <div id='status'>
-          <ThreeBounce gutter={10} color='white' />
+        <div id="status">
+          <ThreeBounce gutter={10} color="white" />
         </div>
       )
     }
     return (
       <div>
         <div
-          id='status'
-          style={{backgroundColor: battery[this.state.health].color}}
-          >
-          <Fade id='battery-health' duration={animationTime}>
+          id="status"
+          style={{ backgroundColor: battery[this.state.health].color }}>
+          <Fade id="battery-health" duration={animationTime}>
             <AnimatedNumber
-              component='text'
+              component="text"
               value={Math.floor(this.state.percentage)}
               style={animatedStyle}
               duration={animationTime * 1000}
               formatValue={n => n + '%'}
               stepPrecision={0}
-              />
+            />
           </Fade>
         </div>
-        <div id='battery-message'>
+        <div id="battery-message">
           <Fade duration={animationTime}>
             {battery[this.state.health].message}
           </Fade>

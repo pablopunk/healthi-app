@@ -37,7 +37,7 @@ class Content extends _react2.default.Component {
       },
       this.state.mouseEnter && _react2.default.createElement(
         _reactFade2.default,
-        { duration: 0.3 },
+        { duration: 0.2 },
         _react2.default.createElement(_buttons2.default, { app: this.props.app })
       ),
       _react2.default.createElement(_status2.default, null)

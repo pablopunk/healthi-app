@@ -53,18 +53,18 @@ class Status extends _react2.default.Component {
   }
 
   componentDidMount() {
-    (0, _healthi2.default)(battery => {
+    (0, _healthi2.default)().then(({ health }) => {
       let batteryStatus;
-      if (battery.health > 80) {
+      if (health > 80) {
         batteryStatus = 'good';
-      } else if (battery.health < 80 && battery.health >= 50) {
+      } else if (health < 80 && health >= 50) {
         batteryStatus = 'medium';
       } else {
         batteryStatus = 'bad';
       }
       this.setState({
         health: batteryStatus,
-        percentage: battery.health
+        percentage: health
       });
     });
   }
@@ -84,8 +84,7 @@ class Status extends _react2.default.Component {
         'div',
         {
           id: 'status',
-          style: { backgroundColor: battery[this.state.health].color }
-        },
+          style: { backgroundColor: battery[this.state.health].color } },
         _react2.default.createElement(
           _reactFade2.default,
           { id: 'battery-health', duration: animationTime },
