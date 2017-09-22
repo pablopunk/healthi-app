@@ -28,15 +28,15 @@ const animationTime = 1;
 
 const battery = {
   good: {
-    message: 'your battery is ok',
+    message: 'Good Condition',
     color: '#16a085'
   },
-  soon: {
-    message: 'replace battery soon',
+  medium: {
+    message: 'Moderate Condition',
     color: '#e67e22'
   },
-  replace: {
-    message: 'replace battery :(',
+  bad: {
+    message: 'Poor Condition',
     color: '#e74c3c'
   }
 };
@@ -55,12 +55,12 @@ class Status extends _react2.default.Component {
   componentDidMount() {
     (0, _healthi2.default)(battery => {
       let batteryStatus;
-      if (battery.health < 80) {
-        batteryStatus = 'replace';
-      } else if (battery.health < 90) {
-        batteryStatus = 'soon';
-      } else {
+      if (battery.health > 80) {
         batteryStatus = 'good';
+      } else if (battery.health <= 80 && battery.health > 50) {
+        batteryStatus = 'medium';
+      } else {
+        batteryStatus = 'bad';
       }
       this.setState({
         health: batteryStatus,
