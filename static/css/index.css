@@ -42,11 +42,12 @@ body, html {
 
 .button {
   display: inline-block;
-  font-size: 1em;
-  color: white;
-  margin-left: .2em;
-  margin: .4em;
-  vertical-align: middle;
+  background-color: orangered;
+  margin: .3em;
+  margin-left: .6em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
 }
 
 .button:hover {

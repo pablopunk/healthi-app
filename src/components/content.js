@@ -16,7 +16,7 @@ export default class Content extends React.Component {
         onMouseLeave={() => this.setState({mouseEnter: false})}
         >
         {this.state.mouseEnter &&
-          <Fade duration={0.1}>
+          <Fade duration={0.2}>
             <Buttons app={this.props.app} />
           </Fade>
         }

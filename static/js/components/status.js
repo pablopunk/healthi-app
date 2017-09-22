@@ -28,15 +28,15 @@ const animationTime = 1;
 
 const battery = {
   good: {
-    message: 'Good Condition',
+    message: 'Good condition',
     color: '#16a085'
   },
   medium: {
-    message: 'Moderate Condition',
+    message: 'Moderate condition',
     color: '#e67e22'
   },
   bad: {
-    message: 'Poor Condition',
+    message: 'Poor condition',
     color: '#e74c3c'
   }
 };
@@ -57,7 +57,7 @@ class Status extends _react2.default.Component {
       let batteryStatus;
       if (battery.health > 80) {
         batteryStatus = 'good';
-      } else if (battery.health <= 80 && battery.health > 50) {
+      } else if (battery.health < 80 && battery.health >= 50) {
         batteryStatus = 'medium';
       } else {
         batteryStatus = 'bad';
