@@ -51,5 +51,5 @@ body, html {
 }
 
 .button:hover {
-  opacity: .5;
+  border: 1px solid whitesmoke;
 }
