@@ -9,15 +9,15 @@ const animationTime = 1
 const battery = {
   good: {
     message: 'Good condition',
-    color: '#16a085'
+    color: 'Teal'
   },
   medium: {
     message: 'Moderate condition',
-    color: '#e67e22'
+    color: 'Orange'
   },
   bad: {
     message: 'Poor condition',
-    color: '#e74c3c'
+    color: 'Tomato'
   }
 }
 
@@ -53,15 +53,14 @@ export default class Status extends React.Component {
     if (this.state.health === undefined) {
       return (
         <div id='status'>
-          <ThreeBounce gutter={10} color='white' />
+          <ThreeBounce gutter={10} color='steelblue' />
         </div>
       )
     }
+    const color = battery[this.state.health].color
     return (
       <div>
-        <div
-          id='status'
-          style={{ backgroundColor: battery[this.state.health].color }}>
+        <div id='status' style={{ color }}>
           <Fade id='battery-health' duration={animationTime}>
             <AnimatedNumber
               component='text'
@@ -73,7 +72,7 @@ export default class Status extends React.Component {
             />
           </Fade>
         </div>
-        <div id='battery-message'>
+        <div id='battery-message' style={{ color }}>
           <Fade duration={animationTime}>
             {battery[this.state.health].message}
           </Fade>

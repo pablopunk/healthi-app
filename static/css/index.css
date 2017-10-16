@@ -1,10 +1,10 @@
-
-body, html {
-    font-family: Avenir, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: #34495e;
+body,
+html {
+  font-family: Avenir, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: white;
 }
 
 #content {
@@ -21,18 +21,15 @@ body, html {
 }
 
 #status i {
-  margin-top: .5em;
+  margin-top: 0.5em;
   font-size: 3em;
-  color: white;
 }
 
 #battery-health {
   font-size: 3em;
-  color: #ecf0f1;
 }
 
 #battery-message {
-  color: #ecf0f1;
   text-align: center;
 }
 
@@ -42,14 +39,16 @@ body, html {
 
 .button {
   display: inline-block;
-  background-color: orangered;
-  margin: .3em;
-  margin-left: .6em;
+  background-color: tomato;
+  margin: 0.3em;
+  margin-left: 0.6em;
   width: 14px;
   height: 14px;
   border-radius: 50%;
+  transition: transform 0.2s;
 }
 
 .button:hover {
-  border: 1px solid whitesmoke;
+  transform: scale(1.2);
+  background-color: red;
 }

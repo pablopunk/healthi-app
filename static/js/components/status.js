@@ -29,15 +29,15 @@ const animationTime = 1;
 const battery = {
   good: {
     message: 'Good condition',
-    color: '#16a085'
+    color: 'Teal'
   },
   medium: {
     message: 'Moderate condition',
-    color: '#e67e22'
+    color: 'Orange'
   },
   bad: {
     message: 'Poor condition',
-    color: '#e74c3c'
+    color: 'Tomato'
   }
 };
 
@@ -74,17 +74,16 @@ class Status extends _react2.default.Component {
       return _react2.default.createElement(
         'div',
         { id: 'status' },
-        _react2.default.createElement(_betterReactSpinkit.ThreeBounce, { gutter: 10, color: 'white' })
+        _react2.default.createElement(_betterReactSpinkit.ThreeBounce, { gutter: 10, color: 'steelblue' })
       );
     }
+    const color = battery[this.state.health].color;
     return _react2.default.createElement(
       'div',
       null,
       _react2.default.createElement(
         'div',
-        {
-          id: 'status',
-          style: { backgroundColor: battery[this.state.health].color } },
+        { id: 'status', style: { color } },
         _react2.default.createElement(
           _reactFade2.default,
           { id: 'battery-health', duration: animationTime },
@@ -100,7 +99,7 @@ class Status extends _react2.default.Component {
       ),
       _react2.default.createElement(
         'div',
-        { id: 'battery-message' },
+        { id: 'battery-message', style: { color } },
         _react2.default.createElement(
           _reactFade2.default,
           { duration: animationTime },
