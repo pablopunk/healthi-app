@@ -16,7 +16,7 @@ const indexURL = 'file://' + indexPath + '/index.html';
 const mb = (0, _menubar2.default)({
   width: 200,
   height: 88,
-  icon: _path2.default.join(__dirname, '..', '..', 'img', 'topbarTemplate.png'),
+  icon: _path2.default.join(__dirname, '..', '..', 'assets', 'topbarTemplate.png'),
   dir: indexPath,
   showDockIcon: true
 });

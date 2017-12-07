@@ -5,10 +5,10 @@
   "main": "static/js/app.js",
   "scripts": {
     "build": "babel src --out-dir static/js",
-    "pack": "npm run build && electron-packager . healthi --platform=darwin --arch=x64 --icon=img/healthi.icns --overwrite --out=dist",
     "start": "npm run build && electron .",
     "test": "standard src/**/*.js && jest jest && ava __tests__/spectron.js",
-    "prepush": "npm run test"
+    "prepush": "npm run test",
+    "dist": "npm run build && build"
   },
   "repository": {
     "type": "git",
@@ -31,7 +31,6 @@
   "dependencies": {
     "babel-plugin-relative-import": "^1.0.3",
     "better-react-spinkit": "^2.0.0",
-    "electron": "^1.4.3",
     "healthi": "^3.4.0",
     "inline-style-prefixer": "^3.0.2",
     "menubar": "^5.1.0",
@@ -47,6 +46,8 @@
     "babel-cli": "^6.18.0",
     "babel-preset-electron": "^1.4.15",
     "babel-preset-react": "^6.22.0",
+    "electron": "^1.7.9",
+    "electron-builder": "^19.48.2",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.13",
     "enzyme": "^2.8.2",
