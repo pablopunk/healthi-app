@@ -25,7 +25,7 @@ or
 npm install   # install dependencies
 npm run build # build code with babel
 npm start     # start app
-npm run pack  # create .app inside dist
+npm run dist  # create .app inside dist/
 ```
 # how
 
