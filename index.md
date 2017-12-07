@@ -1,5 +1,5 @@
 
-![](https://raw.githubusercontent.com/pablopunk/healthi/master/img/biglogo.png)
+![](https://raw.githubusercontent.com/pablopunk/healthi/master/assets/biglogo.png)
 
 <p align="center">
   <a href="https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif"><img style="border-radius: 8px; width: 210px" src="https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif" alt="Healthi app" /></a>
