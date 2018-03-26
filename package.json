@@ -46,7 +46,7 @@
     "babel-cli": "^6.18.0",
     "babel-preset-electron": "^1.4.15",
     "babel-preset-react": "^6.22.0",
-    "electron": "^1.7.9",
+    "electron": "^1.8.2-beta5",
     "electron-builder": "^19.48.2",
     "electron-packager": "^8.1.0",
     "electron-prebuilt": "^1.4.13",
