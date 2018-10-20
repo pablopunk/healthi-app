@@ -31,7 +31,7 @@
   "dependencies": {
     "babel-plugin-relative-import": "^1.0.3",
     "better-react-spinkit": "^2.0.0",
-    "healthi": "^3.4.0",
+    "healthi": "^4.3.0",
     "inline-style-prefixer": "^3.0.2",
     "menubar": "^5.1.0",
     "prop-types": "^15.5.10",
