@@ -31,6 +31,14 @@
   },
   "homepage": "https://github.com/pablopunk/healthi-app#readme",
   "build": {
-    "appId": "com.github.pablopunk.healthi-app"
+    "appId": "com.github.pablopunk.healthi-app",
+    "directories": {
+      "buildResources": "res"
+    },
+    "linux": {
+      "target": [
+        "snap"
+      ]
+    }
   }
 }
