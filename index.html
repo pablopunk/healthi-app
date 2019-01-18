@@ -10,7 +10,6 @@ body {
 main {
   width: 100vw;
   height: 100vh;
-  -webkit-app-region: drag;
   background-color: #273445;
   color: #fafafa;
   font-family: monospace;
@@ -19,9 +18,32 @@ main {
   justify-content: center;
   align-items: center;
 }
+svg {
+	cursor: pointer;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	width: 20px;
+}
+.close-x {
+	stroke: white;
+	stroke-width: 4;
+	opacity: .7;
+}
+.drag-zone {
+  -webkit-app-region: drag;
+	position: absolute;
+	width: 88vw;
+	height: 100vh;
+	right: 0;
+}
   </style>
 </head>
 <body>
+	<svg viewbox="0 0 40 40" class="close">
+		<path class="close-x" d="M 10,10 L 30,30 M 30,10 L 10,30" />
+	</svg>
+	<div class="drag-zone"></div>
   <main>
     <div id="health">
       ...

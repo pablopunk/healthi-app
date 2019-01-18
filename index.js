@@ -33,6 +33,15 @@ const updateUi = (n) => {
   el.innerText = n + '%'
 }
 
-battery()
-  .then(({ health }) => updateUi(health))
-  .catch(err => alert(err.message))
+function listeners () {
+  document.querySelector('svg.close').addEventListener('click', () => window.close())
+}
+
+function init () {
+  listeners()
+  battery()
+    .then(({ health }) => updateUi(health))
+    .catch(err => alert(err.message))
+}
+
+init()
