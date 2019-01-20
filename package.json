@@ -17,14 +17,16 @@
     "dev": "NODE_ENV='development' electron .",
     "build": "electron-builder --dir",
     "dist": "electron-builder",
-    "test": "standard"
+    "test": "standard",
+    "svg-to-png": "for x in 16 32 48 128 256 512 ; do inkscape --export-png res/icon_${x}px.png -w ${x} res/icon.svg ; done",
+    "icns": "npm run svg-to-png && png2icns res/icon.icns res/icon_*px.png"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pablopunk/healthi-app.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pablo Varela <pablovarela182@gmail.com>",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/pablopunk/healthi-app/issues"
@@ -35,9 +37,13 @@
     "directories": {
       "buildResources": "res"
     },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "res/icon.icns"
+    },
     "linux": {
       "target": [
-        "AppImage"
+        "deb"
       ]
     }
   }

@@ -14,7 +14,10 @@
    height="128"
    id="svg5157"
    sodipodi:docname="icon.svg"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:export-filename="/home/pablopunk/src/healthi-app/res/icon.png"
+   inkscape:export-xdpi="384"
+   inkscape:export-ydpi="384">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -28,9 +31,9 @@
      inkscape:window-height="1017"
      id="namedview39"
      showgrid="false"
-     inkscape:zoom="3.6875"
-     inkscape:cx="56.906244"
-     inkscape:cy="55.936674"
+     inkscape:zoom="5.2149125"
+     inkscape:cx="49.914146"
+     inkscape:cy="60.711458"
      inkscape:window-x="0"
      inkscape:window-y="30"
      inkscape:window-maximized="1"
@@ -176,7 +179,7 @@
        x2="64.5"
        y2="117.53941"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1,0,0,-1,0,131.99636)" />
+       gradientTransform="matrix(1.1899315,0,0,-1.1899315,-12.75058,142.53331)" />
   </defs>
   <metadata
      id="metadata5162">
@@ -186,18 +189,18 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
   <path
-     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:url(#linearGradient4565);fill-opacity:1;fill-rule:nonzero;stroke:#d4d4d4;stroke-width:1;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
+     style="color:#000000;display:inline;overflow:visible;visibility:visible;opacity:1;fill:url(#linearGradient4565);fill-opacity:1;fill-rule:nonzero;stroke:#d4d4d4;stroke-width:1.18993151;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;enable-background:accumulate"
      id="path2555-7-1"
-     d="m 64.5,117.99818 c -28.691806,0 -52.000001,-23.308189 -52.000001,-51.999997 0,-28.691808 23.308195,-52.000014 52.000001,-52.000004 28.691802,0 52.00002,23.308196 52,52.000004 0,28.691808 -23.308198,51.999997 -52,51.999997 z"
+     d="m 64.000002,125.87644 c -34.141284,0 -61.8764397,-27.735148 -61.8764397,-61.876434 0,-34.141287 27.7351557,-61.8764556 61.8764397,-61.8764436 34.14128,0 61.876468,27.7351566 61.876438,61.8764436 0,34.141286 -27.735158,61.876434 -61.876438,61.876434 z"
      inkscape:connector-curvature="0" />
   <g
      id="g4597"
-     transform="matrix(0.82308835,0,0,0.82308835,11.410801,11.218774)">
+     transform="matrix(0.97941876,0,0,0.97941876,0.82749207,-1.1837393)">
     <rect
        ry="4.7738967"
        y="36.758064"

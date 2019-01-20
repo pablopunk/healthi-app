@@ -18,7 +18,16 @@ If you're on Mac, you can download [previous releases](https://github.com/pablop
 npm install
 npm run dev  # Start app and watch for changes
 npm test
-npm run dist # Package app
+```
+
+## Build
+
+### Debian
+
+```shell
+npm run icns # generate icons from res/icon.svg (requires inkscape)
+npm run dist # build .deb
+sudo dpkg -i dist/healthi_*_amd64.deb # install deb package
 ```
 
 ## Contribute
