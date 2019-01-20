@@ -1,5 +1,5 @@
 {
-  "name": "healthi",
+  "name": "Healthi",
   "version": "4.0.0",
   "description": "Simple app to check your laptop's battery health",
   "main": "app.js",
