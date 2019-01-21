@@ -8,9 +8,15 @@
 
 ## Download
 
-> WIP. Come back soon.
+### macOS
 
-If you're on Mac, you can download [previous releases](https://github.com/pablopunk/healthi-app/releases) or use `brew cask install healthi`
+You can download the [latest release][releases] or install it with [homebrew cask](https://caskroom.io/): `brew cask install healthi`.
+
+### Linux
+
+If you're on Debian you can download a `.deb` file from the [latest release][releases].
+
+If you want other packages to be available open a [pull request][pr] to include it. The targets are inside `package.json > build > linux > target`.
 
 ## Develop
 
@@ -26,8 +32,7 @@ npm test
 
 ```shell
 npm run icns # generate icons from res/icon.svg (requires inkscape)
-npm run dist # build .deb
-sudo dpkg -i dist/Healthi_*_amd64.deb # install deb package
+npm run dist # build app into dist/ folder
 ```
 
 ## Contribute
@@ -52,3 +57,4 @@ Also, you could fix/improve it yourself:
 [fork]: https://help.github.com/articles/fork-a-repo/
 [contributors]: https://github.com/pablopunk/healthi-app/graphs/contributors
 [pr]: https://help.github.com/articles/creating-a-pull-request/
+[releases]: https://github.com/pablopunk/healthi-app/releases

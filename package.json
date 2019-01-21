@@ -39,7 +39,10 @@
     },
     "mac": {
       "category": "public.app-category.utilities",
-      "icon": "res/icon.icns"
+      "icon": "res/icon.icns",
+      "target": [
+        "zip"
+      ]
     },
     "linux": {
       "target": [
