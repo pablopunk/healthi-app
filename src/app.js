@@ -4,7 +4,7 @@ const DEV = process.env.NODE_ENV === 'development'
 
 if (DEV) {
   require('electron-reload')(__dirname, {
-    electron: require(`${__dirname}/node_modules/electron`)
+    electron: require(`${__dirname}/../node_modules/electron`)
   })
 }
 
@@ -15,7 +15,7 @@ const createWindow = () => {
     frame: false,
     icon: `${__dirname}/res/icon.png`
   })
-  win.loadFile('index.html')
+  win.loadFile('src/index.html')
   if (DEV) {
     win.webContents.openDevTools({ mode: 'detach' })
   }

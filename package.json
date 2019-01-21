@@ -2,7 +2,7 @@
   "name": "Healthi",
   "version": "4.0.0",
   "description": "Simple app to check your laptop's battery health",
-  "main": "app.js",
+  "main": "src/app.js",
   "dependencies": {
     "healthi": "^4.3.2"
   },
