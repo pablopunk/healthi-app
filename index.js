@@ -30,7 +30,7 @@ const updateUi = (n) => {
   } else {
     setGradient(gradients[100])
   }
-  el.innerText = n + '%'
+  el.innerText = parseInt(n) + '%'
 }
 
 function listeners () {
