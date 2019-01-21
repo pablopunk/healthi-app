@@ -10,9 +10,10 @@
 </p>
 
 <p align="center">
-  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/bad.png" alt="">
-  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/medium.png" alt="">
-  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/good.png" alt="">
+  <img width="150" src="https://github.com/pablopunk/art/raw/master/healthi/bad.png" alt="">
+  <img width="170" src="https://github.com/pablopunk/art/raw/master/healthi/medium.png" alt="">
+  <br>
+  <img width="200" src="https://github.com/pablopunk/art/raw/master/healthi/good.png" alt="">
 </p>
 
 
