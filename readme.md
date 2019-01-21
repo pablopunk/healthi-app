@@ -1,10 +1,20 @@
+# Healthi
+
+
+<p align="center">Check your laptops's battery health.</p>
+
 <p align="center">
-	<img src="https://raw.githubusercontent.com/pablopunk/healthi/master/res/biglogo.png" alt="Logo" />
 	<a href="https://github.com/pablopunk/healthi-app#download"><img src="https://img.shields.io/github/downloads/pablopunk/healthi-app/total.svg" alt="Downloads" /></a>
 	<a href="https://travis-ci.org/pablopunk/healthi-app"><img src="https://travis-ci.org/pablopunk/healthi-app.svg?branch=master" alt="Build Status" /></a>
 	<a href="https://github.com/feross/standard"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Code Style" /></a>
-	<p align="center">Check your laptops's battery health.</p>
 </p>
+
+<p align="center">
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/bad.png" alt="">
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/medium.png" alt="">
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/good.png" alt="">
+</p>
+
 
 ## Download
 
