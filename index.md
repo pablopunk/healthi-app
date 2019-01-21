@@ -1,8 +1,8 @@
 
-![](https://raw.githubusercontent.com/pablopunk/healthi/master/assets/biglogo.png)
-
 <p align="center">
-  <a href="https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif"><img style="border-radius: 8px; width: 210px" src="https://github.com/pablopunk/art/raw/master/healthi/screenshot.gif" alt="Healthi app" /></a>
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/bad.png" alt="">
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/medium.png" alt="">
+  <img width="250" src="https://github.com/pablopunk/art/raw/master/healthi/good.png" alt="">
 </p>
 
 _healthi_ shows a small icon in your topbar with the current battery health of your mac, which is the percentage of your battery capacity compared to the original one.
