@@ -22,7 +22,7 @@ npm test
 
 ## Build
 
-### Debian
+### macOS/Debian
 
 ```shell
 npm run icns # generate icons from res/icon.svg (requires inkscape)
