@@ -1,6 +1,8 @@
 node_modules
-npm-debug.log
 dist
 
 # macOS
 .DS_Store
+
+# generated icons
+res/*px.png

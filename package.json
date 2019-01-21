@@ -1,74 +1,53 @@
 {
-  "name": "healthi-app",
-  "version": "3.1.1",
-  "description": "Simple app to check your Mac Battery health.",
-  "main": "static/js/app.js",
+  "name": "Healthi",
+  "version": "4.0.0",
+  "description": "Simple app to check your laptop's battery health",
+  "main": "app.js",
+  "dependencies": {
+    "healthi": "^4.3.2"
+  },
+  "devDependencies": {
+    "electron": "^4.0.1",
+    "electron-builder": "^20.38.5",
+    "electron-reload": "^1.4.0",
+    "standard": "^12.0.1"
+  },
   "scripts": {
-    "build": "babel src --out-dir static/js",
-    "start": "npm run build && electron .",
-    "test": "standard src/**/*.js && jest jest && ava __tests__/spectron.js",
-    "prepush": "npm run test",
-    "dist": "npm run build && build"
+    "start": "electron .",
+    "dev": "NODE_ENV='development' electron .",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder",
+    "test": "standard",
+    "svg-to-png": "for x in 16 32 48 128 256 512 ; do inkscape --export-png res/icon_${x}px.png -w ${x} res/icon.svg ; done",
+    "icns": "npm run svg-to-png && png2icns res/icon.icns res/icon_*px.png"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pablopunk/healthi-app.git"
   },
-  "keywords": [
-    "mac",
-    "battery",
-    "health",
-    "menu",
-    "topbar",
-    "app"
-  ],
-  "author": "Pablo Varela",
-  "license": "MIT",
+  "keywords": [],
+  "author": "Pablo Varela <pablovarela182@gmail.com>",
+  "license": "ISC",
   "bugs": {
     "url": "https://github.com/pablopunk/healthi-app/issues"
   },
   "homepage": "https://github.com/pablopunk/healthi-app#readme",
-  "dependencies": {
-    "babel-plugin-relative-import": "^1.0.3",
-    "better-react-spinkit": "^2.0.0",
-    "healthi": "^4.3.0",
-    "inline-style-prefixer": "^3.0.2",
-    "menubar": "^5.1.0",
-    "prop-types": "^15.5.10",
-    "react": "^15.4.2",
-    "react-animated-number": "^0.4.2",
-    "react-dom": "^15.4.2",
-    "react-fade": "^1.1.1",
-    "standard": "^10.0.1"
-  },
-  "devDependencies": {
-    "ava": "^0.25.0",
-    "babel-cli": "^6.26.0",
-    "babel-preset-electron": "^1.4.15",
-    "babel-preset-react": "^6.22.0",
-    "electron": "^1.8.2-beta5",
-    "electron-builder": "^19.48.2",
-    "electron-packager": "^8.1.0",
-    "electron-prebuilt": "^1.4.13",
-    "enzyme": "^2.8.2",
-    "husky": "^0.13.3",
-    "jest-cli": "^20.0.4",
-    "react-addons-test-utils": "^15.6.0",
-    "react-test-renderer": "^16.0.0",
-    "spectron": "^3.6.4"
-  },
-  "babel": {
-    "presets": [
-      "electron",
-      "react"
-    ],
-    "plugins": [
-      [
-        "babel-plugin-relative-import",
-        {
-          "rootPathSuffix": "static/js"
-        }
+  "build": {
+    "appId": "com.github.pablopunk.healthi-app",
+    "directories": {
+      "buildResources": "res"
+    },
+    "mac": {
+      "category": "public.app-category.utilities",
+      "icon": "res/icon.icns",
+      "target": [
+        "zip"
       ]
-    ]
+    },
+    "linux": {
+      "target": [
+        "deb"
+      ]
+    }
   }
 }
