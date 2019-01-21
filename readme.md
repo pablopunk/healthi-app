@@ -27,7 +27,7 @@ npm test
 ```shell
 npm run icns # generate icons from res/icon.svg (requires inkscape)
 npm run dist # build .deb
-sudo dpkg -i dist/healthi_*_amd64.deb # install deb package
+sudo dpkg -i dist/Healthi_*_amd64.deb # install deb package
 ```
 
 ## Contribute

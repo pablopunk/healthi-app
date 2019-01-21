@@ -16,7 +16,7 @@
     "start": "electron .",
     "dev": "NODE_ENV='development' electron .",
     "build": "electron-builder --dir",
-    "dist": "electron-builder",
+    "dist": "npm run icns && electron-builder",
     "test": "standard",
     "svg-to-png": "for x in 16 32 48 128 256 512 ; do inkscape --export-png res/icon_${x}px.png -w ${x} res/icon.svg ; done",
     "icns": "npm run svg-to-png && png2icns res/icon.icns res/icon_*px.png"
