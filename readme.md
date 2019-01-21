@@ -1,4 +1,4 @@
-# Healthi
+# <img src="https://github.com/pablopunk/art/raw/master/healthi/icon50.png" width="25" /> Healthi
 
 
 <p align="center">Check your laptops's battery health.</p>

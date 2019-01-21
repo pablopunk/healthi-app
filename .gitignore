@@ -6,3 +6,4 @@ dist
 
 # generated icons
 res/*px.png
+res/*.icns
