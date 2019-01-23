@@ -13,7 +13,6 @@ const createWindow = () => {
     width: 200,
     height: 80,
     frame: false,
-    icon: `${__dirname}/res/icon.png`
   })
   win.loadFile('src/index.html')
   if (DEV) {
