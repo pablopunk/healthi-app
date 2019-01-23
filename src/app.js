@@ -12,7 +12,8 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 200,
     height: 80,
-    frame: false
+    frame: false,
+    icon: `${__dirname}/res/icon_512px.png`
   })
   win.loadFile('src/index.html')
   if (DEV) {
