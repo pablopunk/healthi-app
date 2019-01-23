@@ -12,7 +12,7 @@ const createWindow = () => {
   const win = new BrowserWindow({
     width: 200,
     height: 80,
-    frame: false,
+    frame: false
   })
   win.loadFile('src/index.html')
   if (DEV) {
