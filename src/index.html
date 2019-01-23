@@ -13,11 +13,20 @@ main {
   background-color: #273445;
   color: #fafafa;
   font-family: monospace;
-  font-size: 4em;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
+
+#health {
+  font-size: 3em;
+}
+
+#message {
+  font-size: 1.2em;
+}
+
 .close {
 	cursor: pointer;
 	position: absolute;
@@ -53,6 +62,9 @@ main {
   <main>
     <div id="health">
       ...
+    </div>
+    <div id="message">
+      Loading
     </div>
   </main>
   <script src="./index.js"></script>

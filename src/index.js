@@ -1,19 +1,20 @@
 /* global alert */
 const battery = require('healthi')
 
+const GOOD = 100
+const MID = 80
+const BAD = 50
+
+const messages = {
+  [GOOD]: 'Looking good',
+  [MID]: 'It could be better',
+  [BAD]: 'Poor condition'
+}
+
 const gradients = {
-  100: {
-    from: '#452981',
-    to: '#7239b3'
-  },
-  80: {
-    from: '#f37329',
-    to: '#cc3b02'
-  },
-  50: {
-    from: '#a10705',
-    to: '#7a0000'
-  }
+  [GOOD]: { from: '#452981', to: '#7239b3' },
+  [MID]: { from: '#f37329', to: '#cc3b02' },
+  [BAD]: { from: '#a10705', to: '#7a0000' }
 }
 
 const setGradient = ({ from, to }) => {
@@ -21,14 +22,21 @@ const setGradient = ({ from, to }) => {
   main.style.backgroundImage = `linear-gradient(to right, ${from}, ${to})`
 }
 
+const setMessage = (msg) => {
+  document.querySelector('#message').innerText = msg
+}
+
 const updateUi = (n) => {
   const el = document.querySelector('#health')
-  if (n < 50) {
-    setGradient(gradients[50])
-  } else if (n < 80) {
-    setGradient(gradients[80])
+  if (n < BAD) {
+    setGradient(gradients[BAD])
+    setMessage(messages[BAD])
+  } else if (n < MID) {
+    setGradient(gradients[MID])
+    setMessage(messages[MID])
   } else {
-    setGradient(gradients[100])
+    setGradient(gradients[GOOD])
+    setMessage(messages[GOOD])
   }
   el.innerText = parseInt(n) + '%'
 }
