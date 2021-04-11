@@ -20,7 +20,7 @@
 
 ### macOS
 
-You can download the [latest release][releases] or install it with [homebrew cask](https://caskroom.io/): `brew cask install healthi`.
+You can download the [latest release][releases] or install it with [homebrew cask](https://caskroom.io/): `brew install --cask healthi`.
 
 ### Linux
 
