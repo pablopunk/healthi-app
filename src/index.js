@@ -28,17 +28,25 @@ const setMessage = (msg) => {
 
 const updateUi = (n) => {
   const el = document.querySelector('#health')
-  if (n < BAD) {
+  const value = Number.parseInt(n, 10)
+
+  if (Number.isNaN(value)) {
+    el.innerText = 'N/A'
+    setMessage('Unknown')
+    return
+  }
+
+  if (value < BAD) {
     setGradient(gradients[BAD])
     setMessage(messages[BAD])
-  } else if (n < MID) {
+  } else if (value < MID) {
     setGradient(gradients[MID])
     setMessage(messages[MID])
   } else {
     setGradient(gradients[GOOD])
     setMessage(messages[GOOD])
   }
-  el.innerText = parseInt(n) + '%'
+  el.innerText = value + '%'
 }
 
 function listeners () {
